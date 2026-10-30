@@ -13,4 +13,4 @@
 - The public site is a clearly labelled recording. Live editable inference requires the local Node and llama.cpp processes. A saved run never replaces a live request.
 - Euro prices are authored fictional catalog values, not currency conversions or verified market prices. The host makes the final decision; no real venue, attendee, booking or payment is involved.
 - Actual overlap intervals are not a benchmark of speedup, model quality or general reliability.
-- The initial portal confirmation supplied by the participant is preserved unchanged in evidence/submission-confirmation.json and .png. It confirms the original entry. The English-name and updated-image portal resubmission is still pending.
+- The initial portal confirmation supplied by the participant is preserved unchanged in evidence/submission-confirmation.json and .png. It confirms the original entry. The participant subsequently confirmed the English/EUR and new-URL resubmission with a fresh official “Submitted.” screenshot, preserved in evidence/resubmission-confirmation-2026-10-30.json and .png. This confirms receipt, without independently exposing each submitted field.

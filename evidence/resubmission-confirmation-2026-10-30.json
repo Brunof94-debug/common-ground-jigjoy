@@ -1,0 +1,17 @@
+{
+  "project": "Common Ground — Room for a Change",
+  "track": "Freestyle",
+  "repository": "https://github.com/Brunof94-debug/common-ground-jigjoy",
+  "demo": "https://brunof94-debug.github.io/common-ground-jigjoy/",
+  "currency": "EUR",
+  "contestSubmitted": true,
+  "resubmissionConfirmed": true,
+  "confirmedAt": "2026-10-30T14:12:24.174Z",
+  "source": "Participant said Enviei and provided the official Submitted confirmation after receiving the revised English/EUR materials and new URLs.",
+  "pageContext": "https://build.jigjoy.ai/submit",
+  "visibleHeading": "Submitted.",
+  "visibleMessage": "We've got it — your project is live in the gallery. You can resubmit from this page any time before the deadline; the latest entry replaces it and is the one judged.",
+  "evidence": "evidence/resubmission-confirmation-2026-10-30.png",
+  "screenshotSha256": "2b9d2411539e457039cdfb1b122563adf8afcedcf8135fadb5996ba5ebf7773f",
+  "verificationScope": "Confirms successful resubmission from the participant-provided portal screenshot. The screenshot does not display individual field values or the current gallery entry URL; project name and URLs identify the revised materials supplied immediately beforehand."
+}

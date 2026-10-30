@@ -2,7 +2,7 @@
 
 ## Current status
 
-The initial version was manually submitted as Ponto Comum — Room for a Change. Its original portal confirmation is preserved in evidence/submission-confirmation.json and .png. The revised English name, EUR presentation and new screenshots still need a manual portal update through Submit again. The repository and demonstration now have English addresses. Update Repository URL, Live deployment URL and Demo or video URL in the portal before resubmitting.
+The initial version was manually submitted as Ponto Comum — Room for a Change. Its original portal confirmation is preserved in evidence/submission-confirmation.json and .png. The participant manually resubmitted the revised English/EUR entry and supplied a new official portal screenshot showing “Submitted.” on 30 October 2026. The updated materials use Common Ground and the English repository/demo URLs below. See [latest receipt](evidence/resubmission-confirmation-2026-10-30.json) and [latest confirmation image](evidence/resubmission-confirmation-2026-10-30.png). The confirmation screenshot does not display individual submitted field values.
 
 Track: Freestyle
 
@@ -24,8 +24,8 @@ The Planner and Feasibility Reviewer are separate @mozaik-ai/core agents running
 
 Both agents use actual Qwen3-0.6B-Q8_0 inference through llama.cpp with two parallel decoding slots. The current EUR browser run in evidence/live-browser-run.json records 9 completed real model calls, 5 overlapping Planner/Reviewer call pairs and 3 discarded stale responses after a change during inference. The recorded plan totals €462.00, including the 10% reserve, within a €480.00 budget. The repository includes timestamped runtime events, loop IDs, request/response fingerprints and deterministic tests explicitly distinguished from real model runs. Model-generated wording is marked unverified; code performs the hard constraint checks.
 
-## Screenshots and manual update
+## Submission confirmation
 
-Use the three current English screenshots in the delivery folder. Review the form and Hackathon Rules, then resubmit manually before 31 October 2026, 20:00 CET (16:00 Brasilia). The latest submitted entry is judged. Save the actual updated confirmation; the first receipt does not prove the new form values have been submitted.
+The updated materials and the three current English screenshots remain in the delivery folder for reference. The successful resubmission was confirmed by the participant-provided screenshot, preserved separately from the original receipt. Further edits, if needed, must be resubmitted before 31 October 2026, 20:00 CET (16:00 Brasilia); the latest entry is judged.
 
 General JigJoy terms, section 5, restrict automated access without express written permission: https://jigjoy.ai/terms-of-use . AI-assisted development is allowed by the hackathon rules. Prize payment, if awarded, requires an eligible Upwork account; no financial account has been created.

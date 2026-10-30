@@ -10,15 +10,17 @@
   "verifiedChecksRun": "https://github.com/Brunof94-debug/common-ground-jigjoy/actions/runs/41047915312",
   "verifiedPagesRun": "https://github.com/Brunof94-debug/common-ground-jigjoy/actions/runs/41047911341",
   "browserVisualReview": "verified 2026-10-30: desktop, mobile 375 CSS px, both recorded downloads, live UI change during inference",
-  "submissionConfirmedAt": "2026-10-30T12:36:53.676Z",
-  "submissionConfirmationSource": "Screenshot of the official portal provided by the participant in this conversation after manual submission.",
-  "submissionConfirmation": "evidence/submission-confirmation.json",
+  "submissionConfirmedAt": "2026-10-30T14:12:24.174Z",
+  "submissionConfirmationSource": "Participant said Enviei and provided the official Submitted confirmation after receiving the revised English/EUR materials and new URLs.",
+  "submissionConfirmation": "evidence/resubmission-confirmation-2026-10-30.json",
   "currentProjectName": "Common Ground — Room for a Change",
   "presentationCurrency": "EUR",
-  "portalUpdatePending": true,
+  "portalUpdatePending": false,
   "originalSubmittedName": "Ponto Comum — Room for a Change",
   "previousRepository": "https://github.com/Brunof94-debug/ponto-comum-jigjoy",
   "previousPages": "https://brunof94-debug.github.io/ponto-comum-jigjoy/",
   "repositoryId": 1439634100,
-  "englishUrlUpdatePendingInPortal": true
+  "englishUrlUpdatePendingInPortal": false,
+  "resubmissionConfirmed": true,
+  "initialSubmissionConfirmation": "evidence/submission-confirmation.json"
 }
