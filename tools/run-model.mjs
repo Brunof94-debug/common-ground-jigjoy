@@ -1,0 +1,14 @@
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {access} from 'node:fs/promises';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const binary=process.platform==='win32'?path.join(root,'.runtime','llama','llama-server.exe'):'llama-server';
+const model=path.join(root,'.runtime','Qwen3-0.6B-Q8_0.gguf');
+await access(model);
+const args=['-m',model,'--host','127.0.0.1','--port','4350','--alias','ponto-comum-local','-np','2','-c','8192','-t','4','-tb','4','--jinja'];
+console.log('Starting an owned local-only model server with two parallel decoding slots on 127.0.0.1:4350.');
+const child=spawn(binary,args,{cwd:root,stdio:'inherit',windowsHide:true});
+for(const sig of ['SIGINT','SIGTERM'])process.on(sig,()=>child.kill());
+child.on('error',e=>{console.error(e.message);process.exitCode=1;});
+child.on('exit',code=>{process.exitCode=code??1;});

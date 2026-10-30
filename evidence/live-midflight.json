@@ -1,0 +1,534 @@
+{
+  "recordedAt": "2026-10-30T11:12:35.113Z",
+  "description": "Actual local Qwen3-0.6B-Q8_0 inference on Mozaik 4.1.0. Fictional workshop catalog. No simulated fallback.",
+  "runId": "7ecb8eca-082a-4f28-8348-c80cf94b2c78",
+  "revision": 2,
+  "constraints": {
+    "budget": 48000,
+    "people": 32,
+    "stepFree": true,
+    "rain": true,
+    "closed": [
+      "V1"
+    ],
+    "reserveBps": 1000
+  },
+  "risk": {
+    "revision": 2,
+    "version": 1,
+    "priority": "budget",
+    "note": "The budget is below 60,000 cents, so the planning priority is set to budget."
+  },
+  "proposal": {
+    "proposalId": "12fe1e11-9a54-4c59-a0b0-15e02e38ad41",
+    "revision": 2,
+    "riskVersion": 1,
+    "plan": {
+      "id": "V2-A3-F3",
+      "venue": {
+        "id": "V2",
+        "name": "Civic Room",
+        "cost": 26000,
+        "capacity": 36,
+        "stepFree": true,
+        "indoor": true,
+        "comfort": 2
+      },
+      "activity": {
+        "id": "A3",
+        "name": "Seed exchange",
+        "perPerson": 300,
+        "purpose": 1
+      },
+      "refreshment": {
+        "id": "F3",
+        "name": "Tea and water",
+        "perPerson": 200
+      },
+      "people": 32,
+      "subtotal": 42000,
+      "reserve": 4200,
+      "total": 46200,
+      "sourceIds": [
+        "V2",
+        "A3",
+        "F3"
+      ],
+      "reason": "The candidate satisfies all constraints and has the lowest total cost (46,200 cents) for a budget of 48,000 cents."
+    }
+  },
+  "review": {
+    "revision": 2,
+    "proposalId": "12fe1e11-9a54-4c59-a0b0-15e02e38ad41",
+    "verdict": "ready_for_host",
+    "reason": "The proposal meets all constraints: budget of 48,000 cents, 32 people, step-free, rain, closed V1, and a total cost of 46,200 cents. The headroom is 1,800 cents, which is sufficient for the proposed activities and venue.",
+    "checks": {
+      "valid": true,
+      "errors": [],
+      "headroom": 1800
+    }
+  },
+  "jobs": {
+    "planner": null,
+    "sentry": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-10-30T11:12:28.572Z",
+      "type": "participant.joined",
+      "agent": "host",
+      "revision": 0,
+      "id": "034973b4-b20c-46b9-b02a-5d03e8a73489",
+      "name": "Trace observer",
+      "capabilities": [],
+      "role": "human"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-10-30T11:12:28.572Z",
+      "type": "participant.joined",
+      "agent": "host",
+      "revision": 0,
+      "id": "12a944cd-6143-4305-bcb3-b0cf1a2d2498",
+      "name": "Workshop host",
+      "capabilities": [],
+      "role": "human"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-10-30T11:12:28.573Z",
+      "type": "participant.joined",
+      "agent": "planner",
+      "revision": 0,
+      "id": "167ad992-6c81-4582-870d-a00ef4715052",
+      "name": "Planner",
+      "capabilities": [
+        "inference"
+      ],
+      "role": "agent"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-10-30T11:12:28.573Z",
+      "type": "participant.joined",
+      "agent": "sentry",
+      "revision": 0,
+      "id": "0de7ad71-8b9c-4261-ac11-16800286e5b8",
+      "name": "Feasibility reviewer",
+      "capabilities": [
+        "inference"
+      ],
+      "role": "agent"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-10-30T11:12:28.573Z",
+      "type": "board.changed",
+      "agent": "host",
+      "revision": 1,
+      "constraints": {
+        "budget": 80000,
+        "people": 32,
+        "stepFree": true,
+        "rain": false,
+        "closed": [],
+        "reserveBps": 1000
+      }
+    },
+    {
+      "sequence": 6,
+      "at": "2026-10-30T11:12:28.576Z",
+      "type": "inference.started",
+      "agent": "planner",
+      "revision": 1,
+      "loopId": "b5697ac1-dead-46e5-a253-084c6169bf83",
+      "kind": "plan",
+      "requestId": "05c639e0-372f-457d-95f4-608981dcb5f8"
+    },
+    {
+      "sequence": 7,
+      "at": "2026-10-30T11:12:28.589Z",
+      "type": "inference.started",
+      "agent": "sentry",
+      "revision": 1,
+      "loopId": "124bafb7-4086-430d-bf11-d92f7b5195f8",
+      "kind": "scan",
+      "requestId": "e37a0f38-4455-48a7-86bb-35b6a5ed1ab2"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-10-30T11:12:29.090Z",
+      "type": "board.changed",
+      "agent": "host",
+      "revision": 2,
+      "constraints": {
+        "budget": 48000,
+        "people": 32,
+        "stepFree": true,
+        "rain": true,
+        "closed": [
+          "V1"
+        ],
+        "reserveBps": 1000
+      }
+    },
+    {
+      "sequence": 9,
+      "at": "2026-10-30T11:12:29.812Z",
+      "type": "inference.completed",
+      "agent": "sentry",
+      "revision": 1,
+      "loopId": "124bafb7-4086-430d-bf11-d92f7b5195f8",
+      "live": true,
+      "model": "ponto-comum-local",
+      "requestId": "e37a0f38-4455-48a7-86bb-35b6a5ed1ab2",
+      "requestSha256": "8c858408031b3d3e4b07706770c8d88c50e7e93a71ad475344305eaaeead1ec2",
+      "responseSha256": "210b5bf8857b9cfce2ad9dfbce4ae0a2bd7aafd8067d8d567d8967397c83d5b3",
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 323,
+        "total_tokens": 364,
+        "prompt_tokens_details": {
+          "cached_tokens": 322
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 10,
+      "at": "2026-10-30T11:12:29.812Z",
+      "type": "model.answer",
+      "agent": "sentry",
+      "revision": 1,
+      "loopId": "124bafb7-4086-430d-bf11-d92f7b5195f8",
+      "text": "{\n  \"priority\": \"budget\",\n  \"note\": \"The budget is below 60,000 cents, so the planning priority is set to budget.\"\n}"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-10-30T11:12:29.812Z",
+      "type": "answer.discarded",
+      "agent": "sentry",
+      "revision": 2,
+      "reason": "Constraint revision changed during inference",
+      "fromRevision": 1,
+      "nowRevision": 2
+    },
+    {
+      "sequence": 12,
+      "at": "2026-10-30T11:12:29.813Z",
+      "type": "inference.started",
+      "agent": "sentry",
+      "revision": 2,
+      "loopId": "7bcaafb1-8640-45d7-a5b3-961009204e75",
+      "kind": "scan",
+      "requestId": "25ffc412-1fbb-4c86-8b15-2a675a113c0c"
+    },
+    {
+      "sequence": 13,
+      "at": "2026-10-30T11:12:30.076Z",
+      "type": "inference.completed",
+      "agent": "planner",
+      "revision": 1,
+      "loopId": "b5697ac1-dead-46e5-a253-084c6169bf83",
+      "live": true,
+      "model": "ponto-comum-local",
+      "requestId": "05c639e0-372f-457d-95f4-608981dcb5f8",
+      "requestSha256": "1d573bf4cb447d607a7b0069535e00ccf01d6b3f860708b99104f22de5b34657",
+      "responseSha256": "73996f09f7977113e84b0d4e1f8bc3ac85d59d253b8982fcb3f5ca3be774d1fe",
+      "usage": {
+        "completion_tokens": 50,
+        "prompt_tokens": 959,
+        "total_tokens": 1009,
+        "prompt_tokens_details": {
+          "cached_tokens": 958
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 14,
+      "at": "2026-10-30T11:12:30.077Z",
+      "type": "model.answer",
+      "agent": "planner",
+      "revision": 1,
+      "loopId": "b5697ac1-dead-46e5-a253-084c6169bf83",
+      "text": "{\n  \"candidateId\": \"V1-A1-F3\",\n  \"reason\": \"The candidate with the highest purpose (Repair circle) and lowest total cost (50820 cents) is selected.\"\n}"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-10-30T11:12:30.077Z",
+      "type": "answer.discarded",
+      "agent": "planner",
+      "revision": 2,
+      "reason": "Constraint revision changed during inference",
+      "fromRevision": 1,
+      "nowRevision": 2
+    },
+    {
+      "sequence": 16,
+      "at": "2026-10-30T11:12:30.077Z",
+      "type": "inference.started",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "4867548c-c583-4aee-9f77-e79f4479a27e",
+      "kind": "plan",
+      "requestId": "660d067f-25d3-482f-9f94-96fb7ae569f4"
+    },
+    {
+      "sequence": 17,
+      "at": "2026-10-30T11:12:31.135Z",
+      "type": "inference.completed",
+      "agent": "sentry",
+      "revision": 2,
+      "loopId": "7bcaafb1-8640-45d7-a5b3-961009204e75",
+      "live": true,
+      "model": "ponto-comum-local",
+      "requestId": "25ffc412-1fbb-4c86-8b15-2a675a113c0c",
+      "requestSha256": "540b4b89b106abeecd887f635e69ba32eab39cd0faa85bd1cbc48f87899f6c4e",
+      "responseSha256": "bf858c155e28344e646ae8741f84744badfb75987a569fd19f7f0942a29106f2",
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 325,
+        "total_tokens": 366,
+        "prompt_tokens_details": {
+          "cached_tokens": 324
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 18,
+      "at": "2026-10-30T11:12:31.135Z",
+      "type": "model.answer",
+      "agent": "sentry",
+      "revision": 2,
+      "loopId": "7bcaafb1-8640-45d7-a5b3-961009204e75",
+      "text": "{\n  \"priority\": \"budget\",\n  \"note\": \"The budget is below 60,000 cents, so the planning priority is set to budget.\"\n}"
+    },
+    {
+      "sequence": 19,
+      "at": "2026-10-30T11:12:31.135Z",
+      "type": "risk.reviewed",
+      "agent": "sentry",
+      "revision": 2,
+      "version": 1,
+      "priority": "budget",
+      "note": "The budget is below 60,000 cents, so the planning priority is set to budget."
+    },
+    {
+      "sequence": 20,
+      "at": "2026-10-30T11:12:31.382Z",
+      "type": "inference.completed",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "4867548c-c583-4aee-9f77-e79f4479a27e",
+      "live": true,
+      "model": "ponto-comum-local",
+      "requestId": "660d067f-25d3-482f-9f94-96fb7ae569f4",
+      "requestSha256": "15d9cbe260b2c2be56e28e8cac5d1f5e898d46cfc75d7ca0c98ba831aa7985ef",
+      "responseSha256": "bac09c201830d1b39b364bd4531690b363c79bcb3f12d4b61b4cc45f95f515d3",
+      "usage": {
+        "completion_tokens": 45,
+        "prompt_tokens": 237,
+        "total_tokens": 282,
+        "prompt_tokens_details": {
+          "cached_tokens": 146
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 21,
+      "at": "2026-10-30T11:12:31.382Z",
+      "type": "model.answer",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "4867548c-c583-4aee-9f77-e79f4479a27e",
+      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The candidate best follows the purpose constraint (seed exchange) with a high capacity and step-free amenities.\"\n}"
+    },
+    {
+      "sequence": 22,
+      "at": "2026-10-30T11:12:31.382Z",
+      "type": "answer.discarded",
+      "agent": "planner",
+      "revision": 2,
+      "reason": "Peer review arrived during inference; replan with shared state",
+      "fromRiskVersion": 0
+    },
+    {
+      "sequence": 23,
+      "at": "2026-10-30T11:12:31.382Z",
+      "type": "inference.started",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "4385938d-04f3-4976-b681-73348d19027c",
+      "kind": "plan",
+      "requestId": "98b62d19-10f2-43ca-a6d2-a9fed2a8d991"
+    },
+    {
+      "sequence": 24,
+      "at": "2026-10-30T11:12:32.786Z",
+      "type": "inference.completed",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "4385938d-04f3-4976-b681-73348d19027c",
+      "live": true,
+      "model": "ponto-comum-local",
+      "requestId": "98b62d19-10f2-43ca-a6d2-a9fed2a8d991",
+      "requestSha256": "c2f9aad7cf0513b9f5d6efcd168b18b4b0efa2c282ee9a7c89ed4cbf68da92c4",
+      "responseSha256": "eb8d024227242216a5e18f51a6b151b11826deffa4a976716287f85032dd85be",
+      "usage": {
+        "completion_tokens": 58,
+        "prompt_tokens": 251,
+        "total_tokens": 309,
+        "prompt_tokens_details": {
+          "cached_tokens": 146
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 25,
+      "at": "2026-10-30T11:12:32.786Z",
+      "type": "model.answer",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "4385938d-04f3-4976-b681-73348d19027c",
+      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The candidate satisfies all constraints and has the lowest total cost (46,200 cents) for a budget of 48,000 cents.\"\n}"
+    },
+    {
+      "sequence": 26,
+      "at": "2026-10-30T11:12:32.786Z",
+      "type": "proposal.changed",
+      "agent": "planner",
+      "revision": 2,
+      "proposalId": "12fe1e11-9a54-4c59-a0b0-15e02e38ad41",
+      "candidateId": "V2-A3-F3",
+      "total": 46200,
+      "riskVersion": 1
+    },
+    {
+      "sequence": 27,
+      "at": "2026-10-30T11:12:32.786Z",
+      "type": "inference.started",
+      "agent": "sentry",
+      "revision": 2,
+      "loopId": "809d0040-2c14-4e0a-95db-a69da46a7afb",
+      "kind": "review",
+      "requestId": "02f34856-a787-4c82-bef4-bb3b84da1ed9"
+    },
+    {
+      "sequence": 28,
+      "at": "2026-10-30T11:12:35.095Z",
+      "type": "inference.completed",
+      "agent": "sentry",
+      "revision": 2,
+      "loopId": "809d0040-2c14-4e0a-95db-a69da46a7afb",
+      "live": true,
+      "model": "ponto-comum-local",
+      "requestId": "02f34856-a787-4c82-bef4-bb3b84da1ed9",
+      "requestSha256": "19af241db61b3c4d13f5a1d23e2338fa9653aa50200163c55b12f2426da8a0db",
+      "responseSha256": "b47718015ea3c16d7d523b64946c0b5664c820cffe649766e864665704129a43",
+      "usage": {
+        "completion_tokens": 89,
+        "prompt_tokens": 384,
+        "total_tokens": 473,
+        "prompt_tokens_details": {
+          "cached_tokens": 141
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 29,
+      "at": "2026-10-30T11:12:35.095Z",
+      "type": "model.answer",
+      "agent": "sentry",
+      "revision": 2,
+      "loopId": "809d0040-2c14-4e0a-95db-a69da46a7afb",
+      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal meets all constraints: budget of 48,000 cents, 32 people, step-free, rain, closed V1, and a total cost of 46,200 cents. The headroom is 1,800 cents, which is sufficient for the proposed activities and venue.\"\n}"
+    },
+    {
+      "sequence": 30,
+      "at": "2026-10-30T11:12:35.095Z",
+      "type": "proposal.reviewed",
+      "agent": "sentry",
+      "revision": 2,
+      "proposalId": "12fe1e11-9a54-4c59-a0b0-15e02e38ad41",
+      "verdict": "ready_for_host",
+      "reason": "The proposal meets all constraints: budget of 48,000 cents, 32 people, step-free, rain, closed V1, and a total cost of 46,200 cents. The headroom is 1,800 cents, which is sufficient for the proposed activities and venue.",
+      "checks": {
+        "valid": true,
+        "errors": [],
+        "headroom": 1800
+      }
+    }
+  ],
+  "metrics": {
+    "peakConcurrentLoops": 2,
+    "overlappingLivePairs": 3,
+    "completedCalls": 6,
+    "liveCalls": 6,
+    "staleAnswers": 3,
+    "spans": [
+      {
+        "agent": "sentry",
+        "loopId": "124bafb7-4086-430d-bf11-d92f7b5195f8",
+        "revision": 1,
+        "start": "2026-10-30T11:12:28.589Z",
+        "end": "2026-10-30T11:12:29.812Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "planner",
+        "loopId": "b5697ac1-dead-46e5-a253-084c6169bf83",
+        "revision": 1,
+        "start": "2026-10-30T11:12:28.576Z",
+        "end": "2026-10-30T11:12:30.076Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "sentry",
+        "loopId": "7bcaafb1-8640-45d7-a5b3-961009204e75",
+        "revision": 2,
+        "start": "2026-10-30T11:12:29.813Z",
+        "end": "2026-10-30T11:12:31.135Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "planner",
+        "loopId": "4867548c-c583-4aee-9f77-e79f4479a27e",
+        "revision": 2,
+        "start": "2026-10-30T11:12:30.077Z",
+        "end": "2026-10-30T11:12:31.382Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "planner",
+        "loopId": "4385938d-04f3-4976-b681-73348d19027c",
+        "revision": 2,
+        "start": "2026-10-30T11:12:31.382Z",
+        "end": "2026-10-30T11:12:32.786Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "sentry",
+        "loopId": "809d0040-2c14-4e0a-95db-a69da46a7afb",
+        "revision": 2,
+        "start": "2026-10-30T11:12:32.786Z",
+        "end": "2026-10-30T11:12:35.095Z",
+        "live": true,
+        "error": null
+      }
+    ]
+  },
+  "mode": "live-local",
+  "fictionalData": true
+}

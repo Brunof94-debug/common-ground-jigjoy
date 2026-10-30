@@ -1,0 +1,20 @@
+{
+  "name": "ponto-comum-jigjoy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A concurrent planning and feasibility desk built on Mozaik for JigJoy Freestyle.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node demo.mjs",
+    "setup:model": "node tools/setup-model.mjs",
+    "model": "node tools/run-model.mjs"
+  },
+  "dependencies": {
+    "@mozaik-ai/core": "4.1.0"
+  }
+}
