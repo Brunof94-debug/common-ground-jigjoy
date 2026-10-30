@@ -16,8 +16,8 @@ Code calculates costs in integer cents and checks capacity, step-free access, ra
 
 The GitHub Pages demo is a read-only record from an actual local run, clearly labelled as recorded. The README provides commands for the live editable application, without a paid account or API key. Built during the event, with Codex assistance, by solo participant Bruno Fernandes.
 
-Repository URL: pending public creation verification
-Demo URL: pending GitHub Pages deployment verification
+Repository URL: https://github.com/Brunof94-debug/ponto-comum-jigjoy
+Demo URL: https://brunof94-debug.github.io/ponto-comum-jigjoy/ (recorded real local run; HTTP 200 and GitHub Pages deployment verified)
 
 Participant: Bruno Fernandes
 GitHub: Brunof94-debug
@@ -30,4 +30,6 @@ Sign in through the official JigJoy participant dashboard using the registered e
 The general JigJoy Terms of Use, section 5, restrict automated access without express written permission. The existing preparation therefore leaves portal entry and final submission to the participant. Official document: https://jigjoy.ai/terms-of-use . This does not prohibit the expressly permitted AI-assisted development of the project itself.
 
 Official updated deadline: 31 October 2026, 20:00 CET = 16:00 Brasilia time. Internal target remains 08:00 Brasilia to leave a margin. Prize payment, if awarded, requires an eligible Upwork account; no financial account has been created.
+
+
 

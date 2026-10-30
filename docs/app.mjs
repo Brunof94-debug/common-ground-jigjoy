@@ -7,7 +7,7 @@ const descriptions={ 'board.changed':'The host changed the shared brief.','infer
 function render(s){
  current=s;$('revision').textContent=s.revision?'Brief '+s.revision:'Not started';
  for(const role of ['planner','sentry']){const job=s.jobs[role];$(role+'-status').textContent=job?'Working · '+job.kind:s.revision?'Up to date':'Ready';$(role+'-status').className='agent-status'+(job?' working':'');}
- if(s.risk)$('sentry-note').textContent='Shared priority: '+s.risk.priority+'. '+s.risk.note;
+ if(s.risk)$('sentry-note').textContent='Shared priority: '+s.risk.priority+'. Generated reasoning is kept in the run record.';
  if(s.proposal)$('planner-note').textContent='Proposed '+s.proposal.plan.venue.name+'. The reviewer checks this exact version.';
  const p=s.proposal?.plan,r=s.review,complete=r?.proposalId===s.proposal?.proposalId&&r?.checks.valid&&r?.verdict==='ready_for_host';
  $('plan-content').replaceChildren();$('plan-footer').hidden=!complete;
@@ -33,3 +33,4 @@ try{
  if(live){const info=await(await fetch('./api/info')).json();ready=info.modelReady;$('mode-label').textContent=ready?'Live local planning room':'Local model is offline';$('mode-detail').textContent='Fictional workshop · runs on this computer';$('start').disabled=!ready;$('disrupt').disabled=!ready;if(!ready)$('form-message').textContent='Start the local model with npm run model. No recorded result will replace a live request.';const state=await(await fetch('./api/state')).json();syncInputs(state.constraints);render(state);const stream=new EventSource('./api/events');stream.onmessage=e=>render(JSON.parse(e.data));stream.onerror=()=>{$('mode-label').textContent='Connection interrupted';$('form-message').textContent='The local server connection was interrupted. Reload once it is running.';};}
  else{const recorded=await(await fetch('./recorded-run.json')).json();for(const input of $('brief-form').querySelectorAll('input,button'))input.disabled=true;$('mode-label').textContent='Recorded demonstration · actual local model run';$('mode-detail').textContent='Read-only record · live mode requires local setup';$('start').textContent='Recorded run loaded';$('form-message').textContent='These are saved results from a real local run, not live inference. Follow “How it works” to run your own planning room.';syncInputs(recorded.constraints);render(recorded);}
 }catch(e){$('mode-label').textContent='The planning room could not open';$('form-message').textContent=e.message;}
+
