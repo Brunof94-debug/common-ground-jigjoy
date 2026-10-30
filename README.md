@@ -4,6 +4,10 @@ A small local planning desk for a fictional community workshop. The interface, d
 
 Built during the 30–31 October 2026 JigJoy hackathon, **Freestyle** track. Bruno Fernandes participates solo. Development, implementation and documentation were assisted by Codex. This is a prototype using an authored fictional catalog, not a validated service or real venue directory.
 
+Public repository: https://github.com/Brunof94-debug/common-ground-jigjoy
+
+Public recorded demonstration: https://brunof94-debug.github.io/common-ground-jigjoy/
+
 ## Try it
 
 The GitHub Pages demonstration is a **read-only recording of a real local run**, clearly labelled on screen. It makes no live model calls. Clone and run the project for the editable planning room.
@@ -100,5 +104,5 @@ Ten meaningful tests cover integer arithmetic, reserve rounding, every offered o
 
 Application code and original SVG/CSS illustration: MIT, Bruno Fernandes, 2026. Mozaik 4.1.0 is MIT, by JigJoy. llama.cpp is MIT, by its contributors. Qwen3 model weights are Apache-2.0, by Qwen. `npm ci` uses the pinned lockfile; upstream dependencies keep their own licenses. See `THIRD_PARTY_NOTICES.md`.
 
-Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The participant manually submitted the initial version as “Ponto Comum — Room for a Change” on 30 October and supplied the official portal’s “Submitted.” confirmation. The English name, EUR demonstration and revised screenshots are being prepared for a portal update; that update is not yet confirmed. See [submission receipt](evidence/submission-confirmation.json) and [portal screenshot](evidence/submission-confirmation.png).
+Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The participant manually submitted the initial version as “Ponto Comum — Room for a Change” on 30 October and supplied the official portal’s “Submitted.” confirmation. The English name, EUR demonstration, revised screenshots and new repository/demo URLs are ready for a manual portal update; that update is not yet confirmed. See [submission receipt](evidence/submission-confirmation.json) and [portal screenshot](evidence/submission-confirmation.png).
 

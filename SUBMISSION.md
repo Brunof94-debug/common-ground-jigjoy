@@ -2,17 +2,17 @@
 
 ## Current status
 
-The initial version was manually submitted as Ponto Comum — Room for a Change. Its original portal confirmation is preserved in evidence/submission-confirmation.json and .png. The revised English name, EUR presentation and new screenshots still need a manual portal update through Submit again. Existing repository and demonstration URLs are retained.
+The initial version was manually submitted as Ponto Comum — Room for a Change. Its original portal confirmation is preserved in evidence/submission-confirmation.json and .png. The revised English name, EUR presentation and new screenshots still need a manual portal update through Submit again. The repository and demonstration now have English addresses. Update Repository URL, Live deployment URL and Demo or video URL in the portal before resubmitting.
 
 Track: Freestyle
 
 Project name: Common Ground — Room for a Change
 
-Repository URL: https://github.com/Brunof94-debug/ponto-comum-jigjoy
+Repository URL: https://github.com/Brunof94-debug/common-ground-jigjoy
 
-Live deployment URL: https://brunof94-debug.github.io/ponto-comum-jigjoy/
+Live deployment URL: https://brunof94-debug.github.io/common-ground-jigjoy/
 
-Demo URL: https://brunof94-debug.github.io/ponto-comum-jigjoy/
+Demo URL: https://brunof94-debug.github.io/common-ground-jigjoy/
 
 ## What does it do?
 

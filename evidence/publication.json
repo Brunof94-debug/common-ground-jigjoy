@@ -1,14 +1,14 @@
 {
-  "repository": "https://github.com/Brunof94-debug/ponto-comum-jigjoy",
-  "pages": "https://brunof94-debug.github.io/ponto-comum-jigjoy/",
+  "repository": "https://github.com/Brunof94-debug/common-ground-jigjoy",
+  "pages": "https://brunof94-debug.github.io/common-ground-jigjoy/",
   "pagesStatus": null,
   "configuredAt": "2026-10-30T11:24:51.584Z",
   "contestSubmitted": true,
   "account": "Brunof94-debug",
   "verifiedPublicHttp": 200,
   "verifiedAt": "2026-10-30T11:28:08.0131362Z",
-  "verifiedChecksRun": "https://github.com/Brunof94-debug/ponto-comum-jigjoy/actions/runs/41047915312",
-  "verifiedPagesRun": "https://github.com/Brunof94-debug/ponto-comum-jigjoy/actions/runs/41047911341",
+  "verifiedChecksRun": "https://github.com/Brunof94-debug/common-ground-jigjoy/actions/runs/41047915312",
+  "verifiedPagesRun": "https://github.com/Brunof94-debug/common-ground-jigjoy/actions/runs/41047911341",
   "browserVisualReview": "verified 2026-10-30: desktop, mobile 375 CSS px, both recorded downloads, live UI change during inference",
   "submissionConfirmedAt": "2026-10-30T12:36:53.676Z",
   "submissionConfirmationSource": "Screenshot of the official portal provided by the participant in this conversation after manual submission.",
@@ -16,5 +16,9 @@
   "currentProjectName": "Common Ground — Room for a Change",
   "presentationCurrency": "EUR",
   "portalUpdatePending": true,
-  "originalSubmittedName": "Ponto Comum — Room for a Change"
+  "originalSubmittedName": "Ponto Comum — Room for a Change",
+  "previousRepository": "https://github.com/Brunof94-debug/ponto-comum-jigjoy",
+  "previousPages": "https://brunof94-debug.github.io/ponto-comum-jigjoy/",
+  "repositoryId": 1439634100,
+  "englishUrlUpdatePendingInPortal": true
 }
