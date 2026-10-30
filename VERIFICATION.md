@@ -1,19 +1,16 @@
-# Verification — 30 October 2026
+# Verification — 30 October 2026, English/EUR update
 
-## Verified
+- All ten existing Node tests passed after the name, currency metadata and model-alias changes. Controlled fixture results remain live:false and are not counted as real inference.
+- Current CLI run, evidence/live-run.json: run dbef1483-7894-42f9-b851-1f8befbc44b8; 8 actual local Qwen3-0.6B-Q8_0 calls; peak 2 Mozaik loops; 2 overlapping live cross-agent call pairs; 2 discarded responses; no adapter or hard-constraint errors. Currency is explicitly EUR. Final V2-A3-F3 totals €462.00 including €42.00 reserve, within €480.00.
+- Current browser run, evidence/live-browser-run.json: run 48417a8b-06f0-4e06-ab5d-75c462926bd9; 9 real calls, 5 overlapping cross-agent pairs, 3 discarded responses after changing the brief while the agents worked. The final review passed hard checks.
+- Both browser download controls worked. The actual downloaded English planning note states EUR, €420.00 subtotal, €42.00 reserve, €462.00 total and €480.00 budget. The downloaded run JSON declares currency EUR and locale en-GB.
+- Local preview returned HTTP 200 with Common Ground and EUR; its snapshot exposes matching currency metadata. The recorded mode was also inspected in the browser. The longer English brand fits both desktop and the 375-pixel mobile viewport (360 pixels of usable content width), with no horizontal overflow. New screenshots were captured from the actual application.
+- Original BRL CLI and browser JSON records are preserved unchanged in evidence/archive/. Earlier live-midflight.json and live-run-before-budget-band.json remain historical BRL records. The retained small-model error motivated the existing computed budget-band guard; generated wording remains visibly unverified.
+- The original Windows CPU model and server downloads were checksum verified. No paid inference, financial account or reused private key is involved.
 
-- `npm test`: all ten tests passed on Node 22. Fixtures are explicitly marked non-live.
-- Actual local Qwen3-0.6B-Q8_0 inference, using the official checksum-verified llama.cpp b11960 Windows CPU release and two slots.
-- Current `evidence/live-run.json`: 10 completed real model calls; peak 2 Mozaik loops; 4 overlapping cross-agent call pairs; 2 stale answers discarded. The two constraint revisions settled without adapter or hard-constraint errors. Final proposal V2-A3-F3 costs R$462.00 including R$42.00 reserve, within R$480.00.
-- Actual change-during-inference run retained in `evidence/live-midflight.json`: six real calls, three overlapping pairs and three discarded stale answers. That run predates the explicit budget-band input guard; the current implementation's cross-revision behavior also passes the controlled Mozaik race test.
-- The initial model arithmetic/comparison error is retained in `evidence/live-run-before-budget-band.json`. Current code supplies the computed budget band and rejects disallowed priorities. Model notes still have factual and wording limitations; they are visibly marked unverified in the interface.
-- Local HTTP root returned 200 with the intended application title. See the HTTP probe record for route and origin checks.
-- No existing project keys or private model data were reused. No account or paid inference was created. Mozaik cloud telemetry was disabled for the application process.
+## Limits and submission status
 
-## Follow-up and remaining limits
-
-- Follow-up with the browser available on 30 October: the published recording was inspected at desktop and at a 375 CSS-pixel mobile viewport; no horizontal overflow was observed. Both download buttons produced files whose contents were checked. The local interactive application was exercised with a brief change during live inference. See evidence/live-browser-run.json and evidence/screenshots/. This does not constitute testing on every device.
-- Local run intervals show concurrency, not a benchmark of quality or speedup. No real-world workshop, customer, attendee or venue was involved.
-- The public static site is a labelled saved run; live editable inference requires the local Node and llama.cpp processes.
-- Contest submission confirmed from the participant-provided screenshot of the official portal on 30 October, showing ‘Submitted.’ and gallery publication. See evidence/submission-confirmation.json and evidence/submission-confirmation.png. The screenshot does not show the submitted field values or a gallery entry URL. The pending-submission reminder was deleted.
-
+- The public site is a clearly labelled recording. Live editable inference requires the local Node and llama.cpp processes. A saved run never replaces a live request.
+- Euro prices are authored fictional catalog values, not currency conversions or verified market prices. The host makes the final decision; no real venue, attendee, booking or payment is involved.
+- Actual overlap intervals are not a benchmark of speedup, model quality or general reliability.
+- The initial portal confirmation supplied by the participant is preserved unchanged in evidence/submission-confirmation.json and .png. It confirms the original entry. The English-name and updated-image portal resubmission is still pending.

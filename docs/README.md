@@ -1,6 +1,6 @@
-# Ponto Comum — a shared plan, with room for a change
+# Common Ground — a shared plan, with room for a change
 
-A small local planning desk for a fictional community workshop. Two Mozaik agents work concurrently on one board: a Planner proposes a venue, activity and refreshments; a Feasibility Reviewer scans the brief in parallel, shares a priority and reviews the exact proposal. A change of budget, weather or venue invalidates old answers.
+A small local planning desk for a fictional community workshop. The interface, downloadable planning note and presentation use English. The fictional catalog uses EUR, formatted as €462.00; all calculations remain integer cents. These authored euro prices are not an exchange-rate conversion or real venue quotations. Two Mozaik agents work concurrently on one board: a Planner proposes a venue, activity and refreshments; a Feasibility Reviewer scans the brief in parallel, shares a priority and reviews the exact proposal. A change of budget, weather or venue invalidates old answers.
 
 Built during the 30–31 October 2026 JigJoy hackathon, **Freestyle** track. Bruno Fernandes participates solo. Development, implementation and documentation were assisted by Codex. This is a prototype using an authored fictional catalog, not a validated service or real venue directory.
 
@@ -26,7 +26,7 @@ Open http://127.0.0.1:4351/. Click **Start a planning round**, then **Try a chan
 
 The setup helper downloads about 664 MB once, from official llama.cpp and Qwen release locations. It checks both published SHA-256 digests before extracting or running the model server. Files stay in ignored `.runtime/`. No account, API key or paid service is required. The model is Qwen3-0.6B-Q8_0, revision `23749fefcc72300e3a2ad315e1317431b06b590a`; the CPU server is llama.cpp `b11960`, configured with two parallel decoding slots and 4 CPU threads. Inference speed depends on the machine.
 
-On other systems, install an official llama.cpp server, download that same model revision, and serve it on loopback port 4350 with alias `ponto-comum-local`, two slots and at least 4096 context tokens per slot. The automated download/extraction helper is Windows-only; other operating systems have not been tested.
+On other systems, install an official llama.cpp server, download that same model revision, and serve it on loopback port 4350 with alias `common-ground-local`, two slots and at least 4096 context tokens per slot. The automated download/extraction helper is Windows-only; other operating systems have not been tested.
 
 ## What the two agents actually do
 
@@ -67,9 +67,10 @@ node demo.mjs --midflight
 
 The first command runs the original brief, waits for the two perspectives to settle, then applies rain, a closed garden and a reduced budget. The second changes the brief after 500 ms, while inference is in flight. Both write complete timestamped local-run receipts in `evidence/` and fail if no successful live calls overlap, if the final plan fails hard checks, or if the final review is not ready for host review.
 
-- `evidence/live-run.json`: current implementation, ten real model calls, four overlapping cross-agent call pairs, two old answers discarded; final `V2-A3-F3`, total 46,200 cents including 4,200 reserve, against a 48,000-cent budget. These are counts for one authored local scenario, not accuracy statistics.
-- `evidence/live-browser-run.json`: current live application exercised through the browser, including a brief change while both agents were thinking; seven real model calls, four overlapping pairs, three stale answers discarded and a feasible reviewed result. The downloaded JSON and planning note were read back and checked.
-- `evidence/live-midflight.json`: a real change-during-inference run. The first recorded version predates the budget-band guard. It demonstrates revision invalidation; check the `VERIFICATION.md` record for the version tested.
+- `evidence/live-run.json`: current English/EUR implementation, 8 real model calls, 2 overlapping cross-agent call pairs, 2 old answers discarded; final `V2-A3-F3`, total €462.00 including €42.00 reserve, against a €480.00 budget. These are counts for one authored local scenario, not accuracy statistics.
+- `evidence/live-browser-run.json`: current English/EUR application exercised through the browser, including a brief change while agents were thinking; 9 real model calls, 5 overlapping pairs, 3 stale answers discarded and a feasible reviewed result. The downloaded JSON contains explicit EUR currency metadata; the English planning note was read back and checked.
+- `evidence/archive/ponto-comum-brl-live-run.json` and `ponto-comum-brl-live-browser-run.json`: unchanged original BRL run records, retained as historical evidence rather than relabelled as EUR.
+- `evidence/live-midflight.json`: an earlier BRL change-during-inference run. The first recorded version predates the budget-band guard. It demonstrates revision invalidation; check the `VERIFICATION.md` record for the version tested.
 - `evidence/live-run-before-budget-band.json`: deliberately retained initial run in which the small reviewer incorrectly called an 80,000-cent budget below 60,000. It motivated the explicit band and allowed-priority checks. This error is not hidden or counted as a correctness success.
 
 The timestamps are emitted by Mozaik `inference.started` and `inference.completed` events. Each network result includes a request ID, actual provider usage when reported, model name, and SHA-256 request/response fingerprints. The public record contains synthetic data only. Overlap means real model-call intervals overlap; it does not measure speedup or prove every sentence correct. The local server also used two decoding slots.
@@ -89,7 +90,7 @@ Ten meaningful tests cover integer arithmetic, reserve rounding, every offered o
 - The board is held in memory; restarting the application loses it. Export a run record if needed. Downloaded files and backups must be managed by the person who saves them.
 - There is no invented model fallback. Provider failures and invalid outputs become visible errors. A recorded demonstration never replaces a live request.
 - This small model can make reasoning mistakes. Real availability, costs, accessibility requirements and arrangements need human confirmation. No user testing or production reliability has been claimed.
-- Browser follow-up on 30 October verified the published recording at desktop and a 375 CSS-pixel mobile viewport, both download files, and a live interactive change-during-inference run. This is one browser and viewport check, not universal device compatibility testing.
+- The English/EUR follow-up on 30 October checked desktop rendering and a 375-pixel mobile viewport (360 pixels of usable content width), with no horizontal overflow, both live download files and a live interactive change-during-inference run. This is one browser and viewport check, not universal device compatibility testing.
 
 ## Project files
 
@@ -99,5 +100,5 @@ Ten meaningful tests cover integer arithmetic, reserve rounding, every offered o
 
 Application code and original SVG/CSS illustration: MIT, Bruno Fernandes, 2026. Mozaik 4.1.0 is MIT, by JigJoy. llama.cpp is MIT, by its contributors. Qwen3 model weights are Apache-2.0, by Qwen. `npm ci` uses the pinned lockfile; upstream dependencies keep their own licenses. See `THIRD_PARTY_NOTICES.md`.
 
-Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The submission is not complete until accepted by the participant portal.
+Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The participant manually submitted the initial version as “Ponto Comum — Room for a Change” on 30 October and supplied the official portal’s “Submitted.” confirmation. The English name, EUR demonstration and revised screenshots are being prepared for a portal update; that update is not yet confirmed. See [submission receipt](evidence/submission-confirmation.json) and [portal screenshot](evidence/submission-confirmation.png).
 

@@ -1,35 +1,31 @@
-# Submission materials — portal confirmation received
+# Common Ground — Room for a Change
+
+## Current status
+
+The initial version was manually submitted as Ponto Comum — Room for a Change. Its original portal confirmation is preserved in evidence/submission-confirmation.json and .png. The revised English name, EUR presentation and new screenshots still need a manual portal update through Submit again. Existing repository and demonstration URLs are retained.
 
 Track: Freestyle
 
-Project name: Ponto Comum — Room for a Change
-
-Short description:
-A local workshop planning desk where two Mozaik agents work in parallel, share constraints and peer feedback, and discard stale answers when a budget, weather or venue changes.
-
-Description:
-Ponto Comum helps a community workshop host keep a workable plan when the brief changes. A Planner selects a venue, activity and refreshments from an original fictional catalog while an independent Feasibility Reviewer scans the same brief concurrently. The reviewer shares a planning priority, the Planner adapts, and the reviewer examines the exact current proposal. A later change invalidates old responses, including answers still in flight.
-
-Both participants are real Mozaik agents using runLoop and a shared RuntimeState. Each performs actual local Qwen3-0.6B-Q8_0 inference through llama.cpp with two parallel decoding slots. The repository includes timestamped Mozaik events, loop IDs, request/response fingerprints, a change-during-inference run and deterministic tests that are explicitly distinguished from real model results.
-
-Code calculates costs in integer cents and checks capacity, step-free access, rain shelter, closures and a 10% reserve. Model-generated notes remain unverified wording; the host makes the final decision. No bookings, payments or personal data are involved. A small model reasoning error from the first run is retained and explained alongside the guard it motivated.
-
-The GitHub Pages demo is a read-only record from an actual local run, clearly labelled as recorded. The README provides commands for the live editable application, without a paid account or API key. Built during the event, with Codex assistance, by solo participant Bruno Fernandes.
+Project name: Common Ground — Room for a Change
 
 Repository URL: https://github.com/Brunof94-debug/ponto-comum-jigjoy
-Demo URL: https://brunof94-debug.github.io/ponto-comum-jigjoy/ (recorded real local run; HTTP 200 and GitHub Pages deployment verified)
 
-Participant: Bruno Fernandes
-GitHub: Brunof94-debug
-Contact email: use the email already registered in the participant portal.
+Live deployment URL: https://brunof94-debug.github.io/ponto-comum-jigjoy/
 
-## Portal submission record
+Demo URL: https://brunof94-debug.github.io/ponto-comum-jigjoy/
 
-The participant manually submitted the project on 30 October 2026 and provided a screenshot of the official portal showing ‘Submitted.’ and confirming gallery publication. See [the receipt](evidence/submission-confirmation.json) and [the original screenshot](evidence/submission-confirmation.png). This records the visible portal confirmation; the submitted field values were not independently inspected after submission. The pending-submission reminder was deleted after confirmation.
+## What does it do?
 
-The general JigJoy Terms of Use, section 5, restrict automated access without express written permission. The existing preparation therefore leaves portal entry and final submission to the participant. Official document: https://jigjoy.ai/terms-of-use . This does not prohibit the expressly permitted AI-assisted development of the project itself.
+Common Ground helps a community workshop host keep a workable plan when the budget, weather or venue changes. A Planner and an independent Feasibility Reviewer work concurrently, share priorities and proposals, and reconsider their work when the brief changes. Code calculates costs in integer cents and checks capacity, step-free access, rain shelter, venue closures and a 10% reserve. The interface and planning notes use English, with fictional prices in EUR. The host reviews the final plan; no bookings or payments are made. The hosted demo is a clearly labelled recording of a real local model run. The README explains how to run the live, editable application with a local model and no paid API.
 
-Official updated deadline: 31 October 2026, 20:00 CET = 16:00 Brasilia time. Internal target remains 08:00 Brasilia to leave a margin. Prize payment, if awarded, requires an eligible Upwork account; no financial account has been created.
+## How do the agents run concurrently?
 
+The Planner and Feasibility Reviewer are separate @mozaik-ai/core agents running independent runLoop loops against one shared RuntimeState. Both receive the same brief and can issue real inference requests concurrently. The Reviewer shares a planning priority while the Planner develops a proposal; runtime events notify the agents of changes to the constraints, priority, proposal and review. The Reviewer then examines the exact current proposal. Responses from older brief revisions are discarded, and a review must match the current proposal ID.
 
+Both agents use actual Qwen3-0.6B-Q8_0 inference through llama.cpp with two parallel decoding slots. The current EUR browser run in evidence/live-browser-run.json records 9 completed real model calls, 5 overlapping Planner/Reviewer call pairs and 3 discarded stale responses after a change during inference. The recorded plan totals €462.00, including the 10% reserve, within a €480.00 budget. The repository includes timestamped runtime events, loop IDs, request/response fingerprints and deterministic tests explicitly distinguished from real model runs. Model-generated wording is marked unverified; code performs the hard constraint checks.
 
+## Screenshots and manual update
+
+Use the three current English screenshots in the delivery folder. Review the form and Hackathon Rules, then resubmit manually before 31 October 2026, 20:00 CET (16:00 Brasilia). The latest submitted entry is judged. Save the actual updated confirmation; the first receipt does not prove the new form values have been submitted.
+
+General JigJoy terms, section 5, restrict automated access without express written permission: https://jigjoy.ai/terms-of-use . AI-assisted development is allowed by the hackathon rules. Prize payment, if awarded, requires an eligible Upwork account; no financial account has been created.

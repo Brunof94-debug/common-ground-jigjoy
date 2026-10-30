@@ -3,7 +3,7 @@
 process.env.MOZAIK_API_KEY='';process.env.MOZAIK_PROJECT_KEY='';
 import {defineRuntime,RuntimeState,createAgent,createHuman,SituationSpecification,SemanticEvent,ModelContext,SystemMessageItem,ModelMessageItem,TokenUsage,InputTokenDetails,OutputTokenDetails} from '@mozaik-ai/core';
 import {randomUUID,createHash} from 'node:crypto';
-import {catalog,initialConstraints,validateConstraints,candidates,acceptSelection,checkPlan,priorities,summarizeTrace} from './domain.mjs';
+import {currency,catalog,initialConstraints,validateConstraints,candidates,acceptSelection,checkPlan,priorities,summarizeTrace} from './domain.mjs';
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 class On extends SituationSpecification{constructor(match){super();this.match=match;}isSatisfiedBy(c){return this.match(c);}}
 export class BoardState extends RuntimeState{
@@ -17,7 +17,7 @@ export class LocalRunner{
  async run(request){
   const task=request.pcTask;
   const messages=request.context.getItems().filter(x=>x.type==='message').map(x=>({role:x.role==='developer'?'system':x.role,content:x.content.text}));
-  const body={model:'ponto-comum-local',messages,temperature:0.2,seed:42,max_tokens:240,stream:false,chat_template_kwargs:{enable_thinking:false},response_format:{type:'json_object',schema:task.schema}};
+  const body={model:'common-ground-local',messages,temperature:0.2,seed:42,max_tokens:240,stream:false,chat_template_kwargs:{enable_thinking:false},response_format:{type:'json_object',schema:task.schema}};
   let text,row;
   try{
    const response=await this.fetchImpl(this.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(this.timeoutMs)});
@@ -70,7 +70,7 @@ export class PlanningDesk{
   if(s.counts[role]>=4){s.errors.push(role+' reached the four-turn revision limit; a host must review or change the brief.');this.notify();return;}
   s.counts[role]++;
   const task={requestId:randomUUID(),role,kind,revision:s.revision,riskVersion:s.risk?.version??0,proposalId:kind==='review'?s.proposal?.proposalId:null,offered:[],schema:null};
-  const c=structuredClone(s.constraints),brief={constraints:c,fictionalData:true};let instruction;
+  const c=structuredClone(s.constraints),brief={constraints:c,currency,amountUnit:'integer cents',fictionalData:true};let instruction;
   if(kind==='plan'){
    task.offered=candidates(c,s.risk?.priority??'purpose');brief.priority=s.risk?.priority??'purpose';brief.peerReview=s.risk?.note??'The reviewer is checking the brief concurrently.';
    brief.candidates=task.offered.map(p=>({id:p.id,venue:p.venue.name,activity:p.activity.name,refreshments:p.refreshment.name,totalCents:p.total,reserveCents:p.reserve,capacity:p.venue.capacity,stepFree:p.venue.stepFree,indoor:p.venue.indoor,purpose:p.activity.purpose}));
@@ -113,7 +113,7 @@ export class PlanningDesk{
   const pending=s.pending[role];s.pending[role]=null;if(task.revision!==s.revision){queueMicrotask(()=>this.request(role,role==='planner'?'plan':'scan'));}else if(pending){queueMicrotask(()=>this.request(role,pending));}
   this.notify();
  }
- snapshot(){const s=this.state;return {runId:this.runId,revision:s.revision,constraints:structuredClone(s.constraints),risk:structuredClone(s.risk),proposal:structuredClone(s.proposal),review:structuredClone(s.review),jobs:Object.fromEntries(Object.entries(s.jobs).map(([r,t])=>[r,t?{kind:t.kind,revision:t.revision,requestId:t.requestId}:null])),errors:[...s.errors],events:structuredClone(s.events),metrics:summarizeTrace(s.events),mode:'live-local',fictionalData:true};}
+ snapshot(){const s=this.state;return {runId:this.runId,currency,locale:'en-GB',revision:s.revision,constraints:structuredClone(s.constraints),risk:structuredClone(s.risk),proposal:structuredClone(s.proposal),review:structuredClone(s.review),jobs:Object.fromEntries(Object.entries(s.jobs).map(([r,t])=>[r,t?{kind:t.kind,revision:t.revision,requestId:t.requestId}:null])),errors:[...s.errors],events:structuredClone(s.events),metrics:summarizeTrace(s.events),mode:'live-local',fictionalData:true};}
  async waitForIdle(timeout=180000){const start=Date.now();while(Date.now()-start<timeout){await new Promise(r=>setTimeout(r,100));if(!Object.values(this.state.jobs).some(Boolean)&&!Object.values(this.state.pending).some(Boolean))return this.snapshot();}throw new Error('Planning did not settle within the time limit');}
 }
 

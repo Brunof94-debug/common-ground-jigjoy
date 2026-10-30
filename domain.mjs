@@ -1,3 +1,4 @@
+export const currency='EUR';
 export const catalog={
  venues:[
  {id:'V1',name:'Riverside Garden',cost:19000,capacity:48,stepFree:true,indoor:false,comfort:3},

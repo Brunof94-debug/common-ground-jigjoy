@@ -1,4 +1,4 @@
-# Ponto Comum — JigJoy Freestyle
+# Common Ground — JigJoy Freestyle
 
 Started on 2026-10-30 after the official kickoff at 10:00 CET (06:00 America/Sao_Paulo).
 

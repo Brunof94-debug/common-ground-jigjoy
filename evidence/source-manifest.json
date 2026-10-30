@@ -1,11 +1,15 @@
 {
-  "checkedAt": "2026-10-30T11:51:38.870Z",
+  "checkedAt": "2026-10-30T13:07:22.421Z",
   "recordedRun": "live-run.json",
+  "runId": "dbef1483-7894-42f9-b851-1f8befbc44b8",
+  "currency": "EUR",
+  "locale": "en-GB",
   "checksums": {
-    "runtime.mjs": "fd34c1eb5452817a83da08e5731803cb9105de093368f326f47df67bc44a5316",
-    "domain.mjs": "ddd6e5d442a515eb1ac91ed99904964a26ad30fb774951be2724f6ce4cea0cc5",
-    "server.mjs": "4b113b41350f9814be658eb7ccfa24fc1be9ecd0abf0b20a4942f290f355a643",
-    "public/app.mjs": "99d873d30170da161d40c202d8deabcd8766e3cdcf6e210f83dd002b3cf3a0e4",
-    "public/style.css": "f0aa6ec570057bdcfb06604336791d233483d56d79cdaa034b8813bad62c8a3b"
+    "runtime.mjs": "e1344b01f147122969e03a875cef92e28e477f56388c6bf17c2cb9d14277cfa5",
+    "domain.mjs": "aed12b90ac2e00c90611c26431ae9bbc5f7c28da805f36af30466a92df61a6dd",
+    "server.mjs": "79d2507e5a4a8e739e43b45d1f002f5df888ab5ac65bb32b4276b8d54fa1971d",
+    "public/index.html": "4b30d856fee934003fbb54cabfbef284ac99af004b43aa991d4fcd748d7344d4",
+    "public/app.mjs": "bd0d5d76898c8c649e215b8ed97d563ad9b33f6cc7d06ddec0051c1c092504be",
+    "public/style.css": "051a734e8088a8dd5ca8ca5f586419cb3e90a3b603a73ce0562b268c4d51cd7a"
   }
 }

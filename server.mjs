@@ -36,5 +36,5 @@ const server=http.createServer(async(req,res)=>{
  }catch(error){json(res,400,{error:String(error.message).slice(0,200)});}
 });
 server.requestTimeout=10000;server.headersTimeout=10000;
-server.listen(port,'127.0.0.1',()=>console.log('Ponto Comum: http://127.0.0.1:'+port));
+server.listen(port,'127.0.0.1',()=>console.log('Common Ground: http://127.0.0.1:'+port));
 for(const sig of ['SIGINT','SIGTERM'])process.on(sig,()=>{for(const c of clients)c.end();server.close(()=>process.exit());});

@@ -12,5 +12,9 @@
   "browserVisualReview": "verified 2026-10-30: desktop, mobile 375 CSS px, both recorded downloads, live UI change during inference",
   "submissionConfirmedAt": "2026-10-30T12:36:53.676Z",
   "submissionConfirmationSource": "Screenshot of the official portal provided by the participant in this conversation after manual submission.",
-  "submissionConfirmation": "evidence/submission-confirmation.json"
+  "submissionConfirmation": "evidence/submission-confirmation.json",
+  "currentProjectName": "Common Ground — Room for a Change",
+  "presentationCurrency": "EUR",
+  "portalUpdatePending": true,
+  "originalSubmittedName": "Ponto Comum — Room for a Change"
 }

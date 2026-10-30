@@ -1,7 +1,9 @@
 {
-  "recordedAt": "2026-10-30T11:16:31.646Z",
+  "recordedAt": "2026-10-30T12:55:53.360Z",
   "description": "Actual local Qwen3-0.6B-Q8_0 inference on Mozaik 4.1.0. Fictional workshop catalog. No simulated fallback.",
-  "runId": "be7add63-2b7e-4bf1-9513-a27d9d582f57",
+  "runId": "dbef1483-7894-42f9-b851-1f8befbc44b8",
+  "currency": "EUR",
+  "locale": "en-GB",
   "revision": 2,
   "constraints": {
     "budget": 48000,
@@ -17,10 +19,10 @@
     "revision": 2,
     "version": 1,
     "priority": "budget",
-    "note": "The budget is tight (48,000) and there are 32 people, which requires a balanced approach. The step-free access and rain shelter are critical constraints, and they are already satisfied by the code."
+    "note": "The budget is tight (48,000 EUR) and there are 32 people, which requires a balanced allocation. The step-free access and rain shelter are critical constraints, so they are prioritized."
   },
   "proposal": {
-    "proposalId": "8e6c8880-cc57-4e3a-b5ba-23cb71209f11",
+    "proposalId": "cf0ea025-2322-47a3-afcc-a0a9197ead25",
     "revision": 2,
     "riskVersion": 1,
     "plan": {
@@ -54,14 +56,14 @@
         "A3",
         "F3"
       ],
-      "reason": "The candidate satisfies all constraints: budget (46,200), capacity (36), step-free access, and rain shelter. It is the most cost-effective option."
+      "reason": "The candidate meets all constraints: budget (46,200 EUR), capacity (36), step-free access, rain shelter, and purpose (seed exchange). It is the most cost-effective option."
     }
   },
   "review": {
     "revision": 2,
-    "proposalId": "8e6c8880-cc57-4e3a-b5ba-23cb71209f11",
+    "proposalId": "cf0ea025-2322-47a3-afcc-a0a9197ead25",
     "verdict": "ready_for_host",
-    "reason": "The proposal meets all constraints: budget (46,200), capacity (36), step-free access, and rain shelter. The headroom is sufficient for the requested activities and people.",
+    "reason": "The proposal meets all the required constraints: budget (46,200 EUR), capacity (36), step-free access, rain shelter, and purpose (seed exchange). The headroom is sufficient for the requested activities and costs.",
     "checks": {
       "valid": true,
       "errors": [],
@@ -76,33 +78,33 @@
   "events": [
     {
       "sequence": 1,
-      "at": "2026-10-30T11:16:12.661Z",
+      "at": "2026-10-30T12:55:33.702Z",
       "type": "participant.joined",
       "agent": "host",
       "revision": 0,
-      "id": "e3f58605-6261-453d-92e2-e8fc53cd6972",
+      "id": "84c6cd81-df91-43f8-acc0-2e974c804219",
       "name": "Trace observer",
       "capabilities": [],
       "role": "human"
     },
     {
       "sequence": 2,
-      "at": "2026-10-30T11:16:12.662Z",
+      "at": "2026-10-30T12:55:33.703Z",
       "type": "participant.joined",
       "agent": "host",
       "revision": 0,
-      "id": "c978d574-e728-412c-9896-12901a9a6ee2",
+      "id": "fe22606e-c601-4e04-a9c9-14bfad4d14ae",
       "name": "Workshop host",
       "capabilities": [],
       "role": "human"
     },
     {
       "sequence": 3,
-      "at": "2026-10-30T11:16:12.662Z",
+      "at": "2026-10-30T12:55:33.703Z",
       "type": "participant.joined",
       "agent": "planner",
       "revision": 0,
-      "id": "b5978fa9-9856-4a58-b45f-37ab8bc4140e",
+      "id": "9bec5955-84a6-42e7-bc5a-99fa18e952ff",
       "name": "Planner",
       "capabilities": [
         "inference"
@@ -111,11 +113,11 @@
     },
     {
       "sequence": 4,
-      "at": "2026-10-30T11:16:12.662Z",
+      "at": "2026-10-30T12:55:33.703Z",
       "type": "participant.joined",
       "agent": "sentry",
       "revision": 0,
-      "id": "b82d33c5-eeae-4a98-bd4a-4e6b2a066217",
+      "id": "636cc50c-cfd5-4adb-ab04-f168bea195e2",
       "name": "Feasibility reviewer",
       "capabilities": [
         "inference"
@@ -124,7 +126,7 @@
     },
     {
       "sequence": 5,
-      "at": "2026-10-30T11:16:12.662Z",
+      "at": "2026-10-30T12:55:33.704Z",
       "type": "board.changed",
       "agent": "host",
       "revision": 1,
@@ -139,267 +141,216 @@
     },
     {
       "sequence": 6,
-      "at": "2026-10-30T11:16:12.665Z",
+      "at": "2026-10-30T12:55:33.706Z",
       "type": "inference.started",
       "agent": "planner",
       "revision": 1,
-      "loopId": "c80a09ba-afe9-459a-948b-f6005754ecb0",
+      "loopId": "a717f053-a2fb-48b3-b61a-d2f5a03eb181",
       "kind": "plan",
-      "requestId": "8c184d66-d0c4-4ed3-99a0-3c0523eeef5e"
+      "requestId": "42c30911-2e2e-483e-be40-aacc2ce6b874"
     },
     {
       "sequence": 7,
-      "at": "2026-10-30T11:16:12.680Z",
+      "at": "2026-10-30T12:55:33.722Z",
       "type": "inference.started",
       "agent": "sentry",
       "revision": 1,
-      "loopId": "d7c873ef-3b6b-4af4-8a3b-df345e3ed15c",
+      "loopId": "18368de0-0293-4d86-9742-845a48051a76",
       "kind": "scan",
-      "requestId": "72d34634-e62b-4db6-99ce-7c7a20ca12ae"
+      "requestId": "eef99ffd-7cd4-4ffc-807f-ff8a81e8e36c"
     },
     {
       "sequence": 8,
-      "at": "2026-10-30T11:16:15.286Z",
+      "at": "2026-10-30T12:55:39.272Z",
       "type": "inference.completed",
-      "agent": "planner",
+      "agent": "sentry",
       "revision": 1,
-      "loopId": "c80a09ba-afe9-459a-948b-f6005754ecb0",
+      "loopId": "18368de0-0293-4d86-9742-845a48051a76",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "8c184d66-d0c4-4ed3-99a0-3c0523eeef5e",
-      "requestSha256": "1d573bf4cb447d607a7b0069535e00ccf01d6b3f860708b99104f22de5b34657",
-      "responseSha256": "e711c734153366ff8a62ef5827b2f8e2ff2a75fbcd2793d0c2e666bd9f245a93",
+      "model": "common-ground-local",
+      "requestId": "eef99ffd-7cd4-4ffc-807f-ff8a81e8e36c",
+      "requestSha256": "e4b27b0b45891371694478cee703c267aa58abf65c502925ee01e89ef1cb3648",
+      "responseSha256": "a0631c3e8a43908ba4ec78b67ec71a1fd2a2e6fe926494b2127c2e2a38b1108b",
       "usage": {
-        "completion_tokens": 50,
-        "prompt_tokens": 959,
-        "total_tokens": 1009,
+        "completion_tokens": 55,
+        "prompt_tokens": 344,
+        "total_tokens": 399,
         "prompt_tokens_details": {
-          "cached_tokens": 958
+          "cached_tokens": 0
         }
       },
       "finishReason": "stop"
     },
     {
       "sequence": 9,
-      "at": "2026-10-30T11:16:15.286Z",
+      "at": "2026-10-30T12:55:39.273Z",
       "type": "model.answer",
-      "agent": "planner",
+      "agent": "sentry",
       "revision": 1,
-      "loopId": "c80a09ba-afe9-459a-948b-f6005754ecb0",
-      "text": "{\n  \"candidateId\": \"V1-A1-F3\",\n  \"reason\": \"The candidate with the highest purpose (Repair circle) and lowest total cost (50820 cents) is selected.\"\n}"
+      "loopId": "18368de0-0293-4d86-9742-845a48051a76",
+      "text": "{\n  \"priority\": \"comfort\",\n  \"note\": \"The workshop requires a balance between comfort and budget, with step-free access and indoor facilities being critical. The adequate budget band allows for a reasonable allocation while meeting these constraints.\"\n}"
     },
     {
       "sequence": 10,
-      "at": "2026-10-30T11:16:15.286Z",
-      "type": "proposal.changed",
-      "agent": "planner",
+      "at": "2026-10-30T12:55:39.273Z",
+      "type": "risk.reviewed",
+      "agent": "sentry",
       "revision": 1,
-      "proposalId": "1718cf8b-6150-4a3d-ac94-71793387908d",
-      "candidateId": "V1-A1-F3",
-      "total": 50820,
-      "riskVersion": 0
+      "version": 1,
+      "priority": "comfort",
+      "note": "The workshop requires a balance between comfort and budget, with step-free access and indoor facilities being critical. The adequate budget band allows for a reasonable allocation while meeting these constraints."
     },
     {
       "sequence": 11,
-      "at": "2026-10-30T11:16:15.519Z",
+      "at": "2026-10-30T12:55:39.350Z",
       "type": "inference.completed",
-      "agent": "sentry",
+      "agent": "planner",
       "revision": 1,
-      "loopId": "d7c873ef-3b6b-4af4-8a3b-df345e3ed15c",
+      "loopId": "a717f053-a2fb-48b3-b61a-d2f5a03eb181",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "72d34634-e62b-4db6-99ce-7c7a20ca12ae",
-      "requestSha256": "f68a487572713bb9dd3155f392113d2db18271fb726630fc0aa4aaa19515f961",
-      "responseSha256": "67a4e0254c111c8b0ca57704b0da30e03b960163f69647705fa3df7fb2dd73f6",
+      "model": "common-ground-local",
+      "requestId": "42c30911-2e2e-483e-be40-aacc2ce6b874",
+      "requestSha256": "18a1d45149a9f86703ce58eb68f4babe8c741b67044f1c8334ebe2731a9298e5",
+      "responseSha256": "34bee7b11b15303a7f0c1faeb42dc8d4a7c6c6ab0be17d2e3daa44961dacaa86",
       "usage": {
-        "completion_tokens": 62,
-        "prompt_tokens": 334,
-        "total_tokens": 396,
+        "completion_tokens": 59,
+        "prompt_tokens": 969,
+        "total_tokens": 1028,
         "prompt_tokens_details": {
-          "cached_tokens": 6
+          "cached_tokens": 0
         }
       },
       "finishReason": "stop"
     },
     {
       "sequence": 12,
-      "at": "2026-10-30T11:16:15.519Z",
+      "at": "2026-10-30T12:55:39.350Z",
       "type": "model.answer",
-      "agent": "sentry",
+      "agent": "planner",
       "revision": 1,
-      "loopId": "d7c873ef-3b6b-4af4-8a3b-df345e3ed15c",
-      "text": "{\n  \"priority\": \"comfort\",\n  \"note\": \"The workshop requires a balance between comfort and budget, with step-free access and indoor facilities being critical. The adequate budget band allows for a reasonable allocation, but a reduced budget would prioritize comfort over other constraints.\"\n}"
+      "loopId": "a717f053-a2fb-48b3-b61a-d2f5a03eb181",
+      "text": "{\n  \"candidateId\": \"V1-A1-F3\",\n  \"reason\": \"The candidate V1-A1-F3 offers the highest purpose (Repair circle) with the lowest total cost (50820 cents) and meets all constraints.\"\n}"
     },
     {
       "sequence": 13,
-      "at": "2026-10-30T11:16:15.519Z",
-      "type": "risk.reviewed",
-      "agent": "sentry",
+      "at": "2026-10-30T12:55:39.350Z",
+      "type": "answer.discarded",
+      "agent": "planner",
       "revision": 1,
-      "version": 1,
-      "priority": "comfort",
-      "note": "The workshop requires a balance between comfort and budget, with step-free access and indoor facilities being critical. The adequate budget band allows for a reasonable allocation, but a reduced budget would prioritize comfort over other constraints."
+      "reason": "Peer review arrived during inference; replan with shared state",
+      "fromRiskVersion": 0
     },
     {
       "sequence": 14,
-      "at": "2026-10-30T11:16:15.528Z",
+      "at": "2026-10-30T12:55:39.358Z",
       "type": "inference.started",
       "agent": "planner",
       "revision": 1,
-      "loopId": "34b9df89-3a2f-4b26-a70b-555ee8bd89c4",
+      "loopId": "e91baccb-db42-49fc-8b65-66eca8173df5",
       "kind": "plan",
-      "requestId": "19ec8842-e3f4-412e-8b12-75591641d419"
+      "requestId": "6b23e27e-8ca3-484a-9523-28a7a2c8a3d9"
     },
     {
       "sequence": 15,
-      "at": "2026-10-30T11:16:15.528Z",
-      "type": "inference.started",
-      "agent": "sentry",
-      "revision": 1,
-      "loopId": "2ec99f9f-ff84-4daa-a8ee-3162a9852add",
-      "kind": "review",
-      "requestId": "d61bf245-1cf6-4c59-b7e4-f95295c1e012"
-    },
-    {
-      "sequence": 16,
-      "at": "2026-10-30T11:16:20.898Z",
+      "at": "2026-10-30T12:55:43.594Z",
       "type": "inference.completed",
       "agent": "planner",
       "revision": 1,
-      "loopId": "34b9df89-3a2f-4b26-a70b-555ee8bd89c4",
+      "loopId": "e91baccb-db42-49fc-8b65-66eca8173df5",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "19ec8842-e3f4-412e-8b12-75591641d419",
-      "requestSha256": "bc9748ea01cfd1e3614dcabe74e77bef227046d6334c3e499d760b8d52ecafa7",
-      "responseSha256": "fa8ce4566bbf7ea3092924dc565818a6e212a2a0139c7ecc87c38a56d28d051b",
+      "model": "common-ground-local",
+      "requestId": "6b23e27e-8ca3-484a-9523-28a7a2c8a3d9",
+      "requestSha256": "7f50873b3695f056e55c7a593d402e1155641dae006d413edaaa4e1639b36cc9",
+      "responseSha256": "055d901d9e5d35ce3e8b3c494b34de4adf4ed414e7fe8f2d4f8e4e793502ea10",
       "usage": {
-        "completion_tokens": 63,
-        "prompt_tokens": 997,
-        "total_tokens": 1060,
+        "completion_tokens": 68,
+        "prompt_tokens": 1000,
+        "total_tokens": 1068,
         "prompt_tokens_details": {
-          "cached_tokens": 144
+          "cached_tokens": 154
         }
       },
       "finishReason": "stop"
     },
     {
-      "sequence": 17,
-      "at": "2026-10-30T11:16:20.898Z",
+      "sequence": 16,
+      "at": "2026-10-30T12:55:43.594Z",
       "type": "model.answer",
       "agent": "planner",
       "revision": 1,
-      "loopId": "34b9df89-3a2f-4b26-a70b-555ee8bd89c4",
-      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The Civic Room offers step-free access and indoor facilities, which aligns with the workshop's comfort and budget constraints. It provides a more suitable venue for the required activity while meeting the budget.\"\n}"
+      "loopId": "e91baccb-db42-49fc-8b65-66eca8173df5",
+      "text": "{\n  \"candidateId\": \"V1-A3-F3\",\n  \"reason\": \"The candidate with the lowest total cost (38500 cents) and step-free access (true) is the most suitable for the comfort priority, as it meets budget constraints and provides a step-free environment.\"\n}"
     },
     {
-      "sequence": 18,
-      "at": "2026-10-30T11:16:20.898Z",
+      "sequence": 17,
+      "at": "2026-10-30T12:55:43.594Z",
       "type": "proposal.changed",
       "agent": "planner",
       "revision": 1,
-      "proposalId": "be1911f4-4f5c-41ca-b9c8-64a281e5fff3",
-      "candidateId": "V2-A3-F3",
-      "total": 46200,
+      "proposalId": "a1c445ba-b967-4196-b1d4-3d9759f63cfa",
+      "candidateId": "V1-A3-F3",
+      "total": 38500,
       "riskVersion": 1
     },
     {
+      "sequence": 18,
+      "at": "2026-10-30T12:55:43.595Z",
+      "type": "inference.started",
+      "agent": "sentry",
+      "revision": 1,
+      "loopId": "d0c9289c-a715-4699-8200-5949dbfe45f2",
+      "kind": "review",
+      "requestId": "4ef2420a-ddb9-4d4f-9308-67156394ad35"
+    },
+    {
       "sequence": 19,
-      "at": "2026-10-30T11:16:21.424Z",
+      "at": "2026-10-30T12:55:46.303Z",
       "type": "inference.completed",
       "agent": "sentry",
       "revision": 1,
-      "loopId": "2ec99f9f-ff84-4daa-a8ee-3162a9852add",
+      "loopId": "d0c9289c-a715-4699-8200-5949dbfe45f2",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "d61bf245-1cf6-4c59-b7e4-f95295c1e012",
-      "requestSha256": "48308e886ef91f28f6789d7f017a0b3342d89f4d87aa67449bc0dfdce628da9a",
-      "responseSha256": "2f23fdfdf6007f2ce503ed71065e958a6746e223e8ee6cbb452353953ddf8def",
+      "model": "common-ground-local",
+      "requestId": "4ef2420a-ddb9-4d4f-9308-67156394ad35",
+      "requestSha256": "b4df233d498fd8f1233ac4af58540c51347a9271c3bb7d2aa761d1215231a3df",
+      "responseSha256": "be3cb3bd44b593c3b105981047489881698e1a48854c8bb3aea83852680d6701",
       "usage": {
-        "completion_tokens": 92,
-        "prompt_tokens": 376,
-        "total_tokens": 468,
+        "completion_tokens": 86,
+        "prompt_tokens": 403,
+        "total_tokens": 489,
         "prompt_tokens_details": {
-          "cached_tokens": 139
+          "cached_tokens": 15
         }
       },
       "finishReason": "stop"
     },
     {
       "sequence": 20,
-      "at": "2026-10-30T11:16:21.424Z",
+      "at": "2026-10-30T12:55:46.303Z",
       "type": "model.answer",
       "agent": "sentry",
       "revision": 1,
-      "loopId": "2ec99f9f-ff84-4daa-a8ee-3162a9852add",
-      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal meets all the required criteria: budget of $80,000, capacity of 32 people, step-free availability, rain-free conditions, no closures, and a valid headroom of $29,180. The selected activity (Repair circle) has the highest purpose and lowest total cost, ensuring optimal performance.\"\n}"
+      "loopId": "d0c9289c-a715-4699-8200-5949dbfe45f2",
+      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal includes a reserve of 3500 EUR (38500 cents), a capacity of 48 people, and access to step-free facilities. All constraints are met, and the total is within budget. The candidate with the lowest cost and step-free access is the most suitable for comfort.\"\n}"
     },
     {
       "sequence": 21,
-      "at": "2026-10-30T11:16:21.424Z",
-      "type": "answer.discarded",
-      "agent": "sentry",
-      "revision": 1,
-      "reason": "Proposal changed while being reviewed"
-    },
-    {
-      "sequence": 22,
-      "at": "2026-10-30T11:16:21.425Z",
-      "type": "inference.started",
-      "agent": "sentry",
-      "revision": 1,
-      "loopId": "577eca2b-df94-42c7-8a18-77e08e896aad",
-      "kind": "review",
-      "requestId": "76f1a20d-6d8b-4dd7-aac4-a26c503c0f8a"
-    },
-    {
-      "sequence": 23,
-      "at": "2026-10-30T11:16:23.692Z",
-      "type": "inference.completed",
-      "agent": "sentry",
-      "revision": 1,
-      "loopId": "577eca2b-df94-42c7-8a18-77e08e896aad",
-      "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "76f1a20d-6d8b-4dd7-aac4-a26c503c0f8a",
-      "requestSha256": "75a2921b14f98e76c471adbe1042b6aebea1ad224aa04d28d1d8dd783ebf1f42",
-      "responseSha256": "8e0381578b3d883a302696b1915a2a5030dc8f8b6f18678a45fe9ce25f0b6ae8",
-      "usage": {
-        "completion_tokens": 83,
-        "prompt_tokens": 386,
-        "total_tokens": 469,
-        "prompt_tokens_details": {
-          "cached_tokens": 139
-        }
-      },
-      "finishReason": "stop"
-    },
-    {
-      "sequence": 24,
-      "at": "2026-10-30T11:16:23.692Z",
-      "type": "model.answer",
-      "agent": "sentry",
-      "revision": 1,
-      "loopId": "577eca2b-df94-42c7-8a18-77e08e896aad",
-      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal meets all the required constraints: budget of $80,000, 32 people, step-free access, indoor facilities, and a 33,800 headroom. The Civic Room is a suitable venue that aligns with the workshop's comfort and budget constraints.\"\n}"
-    },
-    {
-      "sequence": 25,
-      "at": "2026-10-30T11:16:23.692Z",
+      "at": "2026-10-30T12:55:46.303Z",
       "type": "proposal.reviewed",
       "agent": "sentry",
       "revision": 1,
-      "proposalId": "be1911f4-4f5c-41ca-b9c8-64a281e5fff3",
+      "proposalId": "a1c445ba-b967-4196-b1d4-3d9759f63cfa",
       "verdict": "ready_for_host",
-      "reason": "The proposal meets all the required constraints: budget of $80,000, 32 people, step-free access, indoor facilities, and a 33,800 headroom. The Civic Room is a suitable venue that aligns with the workshop's comfort and budget constraints.",
+      "reason": "The proposal includes a reserve of 3500 EUR (38500 cents), a capacity of 48 people, and access to step-free facilities. All constraints are met, and the total is within budget. The candidate with the lowest cost and step-free access is the most suitable for comfort.",
       "checks": {
         "valid": true,
         "errors": [],
-        "headroom": 33800
+        "headroom": 41500
       }
     },
     {
-      "sequence": 26,
-      "at": "2026-10-30T11:16:23.711Z",
+      "sequence": 22,
+      "at": "2026-10-30T12:55:46.318Z",
       "type": "board.changed",
       "agent": "host",
       "revision": 2,
@@ -415,83 +366,41 @@
       }
     },
     {
-      "sequence": 27,
-      "at": "2026-10-30T11:16:23.712Z",
+      "sequence": 23,
+      "at": "2026-10-30T12:55:46.319Z",
       "type": "inference.started",
       "agent": "planner",
       "revision": 2,
-      "loopId": "ee2b2243-4d65-47e5-834f-1c53828de19f",
+      "loopId": "f24c92d0-0d0e-4910-8e38-5badf4a20a57",
       "kind": "plan",
-      "requestId": "b826a668-b209-4073-ab80-2e89c7c697e9"
+      "requestId": "9c237b17-207a-4cdb-a460-13ab41943bc2"
     },
     {
-      "sequence": 28,
-      "at": "2026-10-30T11:16:23.712Z",
+      "sequence": 24,
+      "at": "2026-10-30T12:55:46.320Z",
       "type": "inference.started",
       "agent": "sentry",
       "revision": 2,
-      "loopId": "b56f26b1-0008-4047-8939-16aeda6f8a57",
+      "loopId": "6af5fe8b-45b5-437d-bed2-39c0c6537d70",
       "kind": "scan",
-      "requestId": "b729dc99-d107-4a3f-b202-ff51dfea491e"
+      "requestId": "03141a07-bf9c-415c-8fee-ab8d9f475f3d"
     },
     {
-      "sequence": 29,
-      "at": "2026-10-30T11:16:26.036Z",
-      "type": "inference.completed",
-      "agent": "planner",
-      "revision": 2,
-      "loopId": "ee2b2243-4d65-47e5-834f-1c53828de19f",
-      "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "b826a668-b209-4073-ab80-2e89c7c697e9",
-      "requestSha256": "15d9cbe260b2c2be56e28e8cac5d1f5e898d46cfc75d7ca0c98ba831aa7985ef",
-      "responseSha256": "39f05156d043156dc40bbdae1d67bc82a5a80464a57506960645dcf2e61f11a0",
-      "usage": {
-        "completion_tokens": 49,
-        "prompt_tokens": 237,
-        "total_tokens": 286,
-        "prompt_tokens_details": {
-          "cached_tokens": 146
-        }
-      },
-      "finishReason": "stop"
-    },
-    {
-      "sequence": 30,
-      "at": "2026-10-30T11:16:26.036Z",
-      "type": "model.answer",
-      "agent": "planner",
-      "revision": 2,
-      "loopId": "ee2b2243-4d65-47e5-834f-1c53828de19f",
-      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The candidate best follows the purpose constraint (seed exchange) with a high capacity and step-free amenities, meeting all constraints.\"\n}"
-    },
-    {
-      "sequence": 31,
-      "at": "2026-10-30T11:16:26.036Z",
-      "type": "proposal.changed",
-      "agent": "planner",
-      "revision": 2,
-      "proposalId": "2c9cd4dd-e587-4f31-b6e3-bf05702c2fc0",
-      "candidateId": "V2-A3-F3",
-      "total": 46200,
-      "riskVersion": 0
-    },
-    {
-      "sequence": 32,
-      "at": "2026-10-30T11:16:26.256Z",
+      "sequence": 25,
+      "at": "2026-10-30T12:55:49.116Z",
       "type": "inference.completed",
       "agent": "sentry",
       "revision": 2,
-      "loopId": "b56f26b1-0008-4047-8939-16aeda6f8a57",
+      "loopId": "6af5fe8b-45b5-437d-bed2-39c0c6537d70",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "b729dc99-d107-4a3f-b202-ff51dfea491e",
-      "requestSha256": "f8cd8f511afd511de6943ebcfcdf354d9e4689636746e3ee0411b00c97832574",
-      "responseSha256": "b33d99272be82a73bce78fa543151354ae444aecf5893397af3ea13e36e0f000",
+      "model": "common-ground-local",
+      "requestId": "03141a07-bf9c-415c-8fee-ab8d9f475f3d",
+      "requestSha256": "2e6d84abbfbdeeb1bf59accebe2d3569c4eff1ec53ab419c9f29cea124859f86",
+      "responseSha256": "406094176be9f8efb58281165e141b84596b6389d60d4457728ad73e3cb1a948",
       "usage": {
-        "completion_tokens": 61,
-        "prompt_tokens": 335,
-        "total_tokens": 396,
+        "completion_tokens": 63,
+        "prompt_tokens": 345,
+        "total_tokens": 408,
         "prompt_tokens_details": {
           "cached_tokens": 15
         }
@@ -499,175 +408,166 @@
       "finishReason": "stop"
     },
     {
-      "sequence": 33,
-      "at": "2026-10-30T11:16:26.257Z",
+      "sequence": 26,
+      "at": "2026-10-30T12:55:49.117Z",
       "type": "model.answer",
       "agent": "sentry",
       "revision": 2,
-      "loopId": "b56f26b1-0008-4047-8939-16aeda6f8a57",
-      "text": "{\n  \"priority\": \"budget\",\n  \"note\": \"The budget is tight (48,000) and there are 32 people, which requires a balanced approach. The step-free access and rain shelter are critical constraints, and they are already satisfied by the code.\"\n}"
+      "loopId": "6af5fe8b-45b5-437d-bed2-39c0c6537d70",
+      "text": "{\n  \"priority\": \"budget\",\n  \"note\": \"The budget is tight (48,000 EUR) and there are 32 people, which requires a balanced allocation. The step-free access and rain shelter are critical constraints, so they are prioritized.\"\n}"
     },
     {
-      "sequence": 34,
-      "at": "2026-10-30T11:16:26.257Z",
+      "sequence": 27,
+      "at": "2026-10-30T12:55:49.117Z",
       "type": "risk.reviewed",
       "agent": "sentry",
       "revision": 2,
       "version": 1,
       "priority": "budget",
-      "note": "The budget is tight (48,000) and there are 32 people, which requires a balanced approach. The step-free access and rain shelter are critical constraints, and they are already satisfied by the code."
+      "note": "The budget is tight (48,000 EUR) and there are 32 people, which requires a balanced allocation. The step-free access and rain shelter are critical constraints, so they are prioritized."
     },
     {
-      "sequence": 35,
-      "at": "2026-10-30T11:16:26.258Z",
-      "type": "inference.started",
-      "agent": "planner",
-      "revision": 2,
-      "loopId": "f2917f07-2db4-4766-8706-a9a0e513f7fe",
-      "kind": "plan",
-      "requestId": "826a7181-8dfa-4624-aded-a19f6e4ee431"
-    },
-    {
-      "sequence": 36,
-      "at": "2026-10-30T11:16:26.259Z",
-      "type": "inference.started",
-      "agent": "sentry",
-      "revision": 2,
-      "loopId": "ca8a69f2-be54-4ec6-962e-3bfbe587f344",
-      "kind": "review",
-      "requestId": "f56ff7dd-cf1c-44dc-8613-d32134a8c2f7"
-    },
-    {
-      "sequence": 37,
-      "at": "2026-10-30T11:16:28.877Z",
+      "sequence": 28,
+      "at": "2026-10-30T12:55:49.329Z",
       "type": "inference.completed",
       "agent": "planner",
       "revision": 2,
-      "loopId": "f2917f07-2db4-4766-8706-a9a0e513f7fe",
+      "loopId": "f24c92d0-0d0e-4910-8e38-5badf4a20a57",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "826a7181-8dfa-4624-aded-a19f6e4ee431",
-      "requestSha256": "fe0fec12e6f5692ab9303f4ee753dbf92d56dd9114fed2772f7e272f2f94306f",
-      "responseSha256": "635c23a00a65ca4f7fcd3b890c1feede8812aaf0c85fb81605fa1cd43aa45189",
+      "model": "common-ground-local",
+      "requestId": "9c237b17-207a-4cdb-a460-13ab41943bc2",
+      "requestSha256": "a44f209c9fde08e9732daa2dacb26933716b34f2e929c0f350b5762ff44c0333",
+      "responseSha256": "8561dbb30c871da2a2567ce351f86c24e0a6c3099a6d5526df52f79e99ae6c80",
       "usage": {
-        "completion_tokens": 61,
-        "prompt_tokens": 275,
-        "total_tokens": 336,
+        "completion_tokens": 75,
+        "prompt_tokens": 247,
+        "total_tokens": 322,
         "prompt_tokens_details": {
-          "cached_tokens": 146
+          "cached_tokens": 104
         }
       },
       "finishReason": "stop"
     },
     {
-      "sequence": 38,
-      "at": "2026-10-30T11:16:28.878Z",
+      "sequence": 29,
+      "at": "2026-10-30T12:55:49.329Z",
       "type": "model.answer",
       "agent": "planner",
       "revision": 2,
-      "loopId": "f2917f07-2db4-4766-8706-a9a0e513f7fe",
-      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The candidate satisfies all constraints: budget (46,200), capacity (36), step-free access, and rain shelter. It is the most cost-effective option.\"\n}"
+      "loopId": "f24c92d0-0d0e-4910-8e38-5badf4a20a57",
+      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The candidate V2-A3-F3 best fits the purpose of the workshop (Seed exchange) with a budget of 48,000 EUR, capacity of 32 people, and step-free amenities, making it the optimal choice.\"\n}"
     },
     {
-      "sequence": 39,
-      "at": "2026-10-30T11:16:28.878Z",
+      "sequence": 30,
+      "at": "2026-10-30T12:55:49.329Z",
+      "type": "answer.discarded",
+      "agent": "planner",
+      "revision": 2,
+      "reason": "Peer review arrived during inference; replan with shared state",
+      "fromRiskVersion": 0
+    },
+    {
+      "sequence": 31,
+      "at": "2026-10-30T12:55:49.330Z",
+      "type": "inference.started",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "2fb2776c-ad97-4526-965f-ed6a4d33d6cd",
+      "kind": "plan",
+      "requestId": "fb411774-786d-4426-85d4-d9a9f4640274"
+    },
+    {
+      "sequence": 32,
+      "at": "2026-10-30T12:55:50.931Z",
+      "type": "inference.completed",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "2fb2776c-ad97-4526-965f-ed6a4d33d6cd",
+      "live": true,
+      "model": "common-ground-local",
+      "requestId": "fb411774-786d-4426-85d4-d9a9f4640274",
+      "requestSha256": "682db09aaac0549f013cb52075224c9eaf5a3cba2e0ab6c72d82ab9a84fc7c4b",
+      "responseSha256": "62f0d8df7d7fe0168b5816a3db6d5db57853f23a839023e62c7ee1dea63c296b",
+      "usage": {
+        "completion_tokens": 67,
+        "prompt_tokens": 283,
+        "total_tokens": 350,
+        "prompt_tokens_details": {
+          "cached_tokens": 156
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "sequence": 33,
+      "at": "2026-10-30T12:55:50.931Z",
+      "type": "model.answer",
+      "agent": "planner",
+      "revision": 2,
+      "loopId": "2fb2776c-ad97-4526-965f-ed6a4d33d6cd",
+      "text": "{\n  \"candidateId\": \"V2-A3-F3\",\n  \"reason\": \"The candidate meets all constraints: budget (46,200 EUR), capacity (36), step-free access, rain shelter, and purpose (seed exchange). It is the most cost-effective option.\"\n}"
+    },
+    {
+      "sequence": 34,
+      "at": "2026-10-30T12:55:50.931Z",
       "type": "proposal.changed",
       "agent": "planner",
       "revision": 2,
-      "proposalId": "8e6c8880-cc57-4e3a-b5ba-23cb71209f11",
+      "proposalId": "cf0ea025-2322-47a3-afcc-a0a9197ead25",
       "candidateId": "V2-A3-F3",
       "total": 46200,
       "riskVersion": 1
     },
     {
-      "sequence": 40,
-      "at": "2026-10-30T11:16:29.662Z",
-      "type": "inference.completed",
-      "agent": "sentry",
-      "revision": 2,
-      "loopId": "ca8a69f2-be54-4ec6-962e-3bfbe587f344",
-      "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "f56ff7dd-cf1c-44dc-8613-d32134a8c2f7",
-      "requestSha256": "a9c5b4d097f64de309d235ff53f7cc573d0bd86d9428dfcd478f6e4d8e264c4e",
-      "responseSha256": "42100fb3a544e7ab2ba207aecfa9aa99e58d01fe964b1c6217dc504c8583a673",
-      "usage": {
-        "completion_tokens": 105,
-        "prompt_tokens": 372,
-        "total_tokens": 477,
-        "prompt_tokens_details": {
-          "cached_tokens": 141
-        }
-      },
-      "finishReason": "stop"
-    },
-    {
-      "sequence": 41,
-      "at": "2026-10-30T11:16:29.662Z",
-      "type": "model.answer",
-      "agent": "sentry",
-      "revision": 2,
-      "loopId": "ca8a69f2-be54-4ec6-962e-3bfbe587f344",
-      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal meets all constraints: budget ($48,000), capacity (32 people), step-free amenities, rain, and closed venue V1. The headroom is $1,800, which is sufficient for the proposed activities. The tradeoff is that the plan includes a reserve of $4,200, which is within the budget and aligns with the purpose constraint.\"\n}"
-    },
-    {
-      "sequence": 42,
-      "at": "2026-10-30T11:16:29.662Z",
-      "type": "answer.discarded",
-      "agent": "sentry",
-      "revision": 2,
-      "reason": "Proposal changed while being reviewed"
-    },
-    {
-      "sequence": 43,
-      "at": "2026-10-30T11:16:29.663Z",
+      "sequence": 35,
+      "at": "2026-10-30T12:55:50.932Z",
       "type": "inference.started",
       "agent": "sentry",
       "revision": 2,
-      "loopId": "ba398494-b258-4f5e-92de-7fa8b905820a",
+      "loopId": "64b7512d-1fde-46f7-9d59-ae8324b66af0",
       "kind": "review",
-      "requestId": "997a44b9-d086-4706-8abc-75645c4df883"
+      "requestId": "379f884f-d17a-46f3-bdcc-1a02f6f1555a"
     },
     {
-      "sequence": 44,
-      "at": "2026-10-30T11:16:31.541Z",
+      "sequence": 36,
+      "at": "2026-10-30T12:55:53.327Z",
       "type": "inference.completed",
       "agent": "sentry",
       "revision": 2,
-      "loopId": "ba398494-b258-4f5e-92de-7fa8b905820a",
+      "loopId": "64b7512d-1fde-46f7-9d59-ae8324b66af0",
       "live": true,
-      "model": "ponto-comum-local",
-      "requestId": "997a44b9-d086-4706-8abc-75645c4df883",
-      "requestSha256": "b13ed87965cb632f228712271be81740e37203be2a61dd53ec9151e2e1eadef0",
-      "responseSha256": "d4346dde5b17262e6c3a6c23f4e2745bf491d82839b987f8fe823450ba7752c9",
+      "model": "common-ground-local",
+      "requestId": "379f884f-d17a-46f3-bdcc-1a02f6f1555a",
+      "requestSha256": "543951936e8c9a71cbe9e6be3a141b2ddef8fcd8c8377ee7c97e0d1ac48b6250",
+      "responseSha256": "f647a37a860a3310b394181a53086f66933e3b7b88a93f6f7b529662046d03df",
       "usage": {
-        "completion_tokens": 62,
-        "prompt_tokens": 386,
-        "total_tokens": 448,
+        "completion_tokens": 70,
+        "prompt_tokens": 399,
+        "total_tokens": 469,
         "prompt_tokens_details": {
-          "cached_tokens": 141
+          "cached_tokens": 15
         }
       },
       "finishReason": "stop"
     },
     {
-      "sequence": 45,
-      "at": "2026-10-30T11:16:31.541Z",
+      "sequence": 37,
+      "at": "2026-10-30T12:55:53.327Z",
       "type": "model.answer",
       "agent": "sentry",
       "revision": 2,
-      "loopId": "ba398494-b258-4f5e-92de-7fa8b905820a",
-      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal meets all constraints: budget (46,200), capacity (36), step-free access, and rain shelter. The headroom is sufficient for the requested activities and people.\"\n}"
+      "loopId": "64b7512d-1fde-46f7-9d59-ae8324b66af0",
+      "text": "{\n  \"verdict\": \"ready_for_host\",\n  \"reason\": \"The proposal meets all the required constraints: budget (46,200 EUR), capacity (36), step-free access, rain shelter, and purpose (seed exchange). The headroom is sufficient for the requested activities and costs.\"\n}"
     },
     {
-      "sequence": 46,
-      "at": "2026-10-30T11:16:31.541Z",
+      "sequence": 38,
+      "at": "2026-10-30T12:55:53.327Z",
       "type": "proposal.reviewed",
       "agent": "sentry",
       "revision": 2,
-      "proposalId": "8e6c8880-cc57-4e3a-b5ba-23cb71209f11",
+      "proposalId": "cf0ea025-2322-47a3-afcc-a0a9197ead25",
       "verdict": "ready_for_host",
-      "reason": "The proposal meets all constraints: budget (46,200), capacity (36), step-free access, and rain shelter. The headroom is sufficient for the requested activities and people.",
+      "reason": "The proposal meets all the required constraints: budget (46,200 EUR), capacity (36), step-free access, rain shelter, and purpose (seed exchange). The headroom is sufficient for the requested activities and costs.",
       "checks": {
         "valid": true,
         "errors": [],
@@ -677,98 +577,80 @@
   ],
   "metrics": {
     "peakConcurrentLoops": 2,
-    "overlappingLivePairs": 4,
-    "completedCalls": 10,
-    "liveCalls": 10,
+    "overlappingLivePairs": 2,
+    "completedCalls": 8,
+    "liveCalls": 8,
     "staleAnswers": 2,
     "spans": [
       {
-        "agent": "planner",
-        "loopId": "c80a09ba-afe9-459a-948b-f6005754ecb0",
-        "revision": 1,
-        "start": "2026-10-30T11:16:12.665Z",
-        "end": "2026-10-30T11:16:15.286Z",
-        "live": true,
-        "error": null
-      },
-      {
         "agent": "sentry",
-        "loopId": "d7c873ef-3b6b-4af4-8a3b-df345e3ed15c",
+        "loopId": "18368de0-0293-4d86-9742-845a48051a76",
         "revision": 1,
-        "start": "2026-10-30T11:16:12.680Z",
-        "end": "2026-10-30T11:16:15.519Z",
+        "start": "2026-10-30T12:55:33.722Z",
+        "end": "2026-10-30T12:55:39.272Z",
         "live": true,
         "error": null
       },
       {
         "agent": "planner",
-        "loopId": "34b9df89-3a2f-4b26-a70b-555ee8bd89c4",
+        "loopId": "a717f053-a2fb-48b3-b61a-d2f5a03eb181",
         "revision": 1,
-        "start": "2026-10-30T11:16:15.528Z",
-        "end": "2026-10-30T11:16:20.898Z",
-        "live": true,
-        "error": null
-      },
-      {
-        "agent": "sentry",
-        "loopId": "2ec99f9f-ff84-4daa-a8ee-3162a9852add",
-        "revision": 1,
-        "start": "2026-10-30T11:16:15.528Z",
-        "end": "2026-10-30T11:16:21.424Z",
-        "live": true,
-        "error": null
-      },
-      {
-        "agent": "sentry",
-        "loopId": "577eca2b-df94-42c7-8a18-77e08e896aad",
-        "revision": 1,
-        "start": "2026-10-30T11:16:21.425Z",
-        "end": "2026-10-30T11:16:23.692Z",
+        "start": "2026-10-30T12:55:33.706Z",
+        "end": "2026-10-30T12:55:39.350Z",
         "live": true,
         "error": null
       },
       {
         "agent": "planner",
-        "loopId": "ee2b2243-4d65-47e5-834f-1c53828de19f",
-        "revision": 2,
-        "start": "2026-10-30T11:16:23.712Z",
-        "end": "2026-10-30T11:16:26.036Z",
+        "loopId": "e91baccb-db42-49fc-8b65-66eca8173df5",
+        "revision": 1,
+        "start": "2026-10-30T12:55:39.358Z",
+        "end": "2026-10-30T12:55:43.594Z",
         "live": true,
         "error": null
       },
       {
         "agent": "sentry",
-        "loopId": "b56f26b1-0008-4047-8939-16aeda6f8a57",
+        "loopId": "d0c9289c-a715-4699-8200-5949dbfe45f2",
+        "revision": 1,
+        "start": "2026-10-30T12:55:43.595Z",
+        "end": "2026-10-30T12:55:46.303Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "sentry",
+        "loopId": "6af5fe8b-45b5-437d-bed2-39c0c6537d70",
         "revision": 2,
-        "start": "2026-10-30T11:16:23.712Z",
-        "end": "2026-10-30T11:16:26.256Z",
+        "start": "2026-10-30T12:55:46.320Z",
+        "end": "2026-10-30T12:55:49.116Z",
         "live": true,
         "error": null
       },
       {
         "agent": "planner",
-        "loopId": "f2917f07-2db4-4766-8706-a9a0e513f7fe",
+        "loopId": "f24c92d0-0d0e-4910-8e38-5badf4a20a57",
         "revision": 2,
-        "start": "2026-10-30T11:16:26.258Z",
-        "end": "2026-10-30T11:16:28.877Z",
+        "start": "2026-10-30T12:55:46.319Z",
+        "end": "2026-10-30T12:55:49.329Z",
+        "live": true,
+        "error": null
+      },
+      {
+        "agent": "planner",
+        "loopId": "2fb2776c-ad97-4526-965f-ed6a4d33d6cd",
+        "revision": 2,
+        "start": "2026-10-30T12:55:49.330Z",
+        "end": "2026-10-30T12:55:50.931Z",
         "live": true,
         "error": null
       },
       {
         "agent": "sentry",
-        "loopId": "ca8a69f2-be54-4ec6-962e-3bfbe587f344",
+        "loopId": "64b7512d-1fde-46f7-9d59-ae8324b66af0",
         "revision": 2,
-        "start": "2026-10-30T11:16:26.259Z",
-        "end": "2026-10-30T11:16:29.662Z",
-        "live": true,
-        "error": null
-      },
-      {
-        "agent": "sentry",
-        "loopId": "ba398494-b258-4f5e-92de-7fa8b905820a",
-        "revision": 2,
-        "start": "2026-10-30T11:16:29.663Z",
-        "end": "2026-10-30T11:16:31.541Z",
+        "start": "2026-10-30T12:55:50.932Z",
+        "end": "2026-10-30T12:55:53.327Z",
         "live": true,
         "error": null
       }
