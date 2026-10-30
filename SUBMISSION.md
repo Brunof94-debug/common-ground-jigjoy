@@ -1,4 +1,4 @@
-# Ready-to-copy submission — NOT YET SUBMITTED
+# Submission materials — portal confirmation received
 
 Track: Freestyle
 
@@ -23,9 +23,9 @@ Participant: Bruno Fernandes
 GitHub: Brunof94-debug
 Contact email: use the email already registered in the participant portal.
 
-## Manual portal handoff
+## Portal submission record
 
-Sign in through the official JigJoy participant dashboard using the registered email. Select Freestyle, paste the verified repository URL and the English description above, and review any legal confirmation yourself. The published track requires a public repository and README; no video is required. Save the portal's actual success message or receipt. Do not label this project submitted until that receipt is confirmed.
+The participant manually submitted the project on 30 October 2026 and provided a screenshot of the official portal showing ‘Submitted.’ and confirming gallery publication. See [the receipt](evidence/submission-confirmation.json) and [the original screenshot](evidence/submission-confirmation.png). This records the visible portal confirmation; the submitted field values were not independently inspected after submission. The pending-submission reminder was deleted after confirmation.
 
 The general JigJoy Terms of Use, section 5, restrict automated access without express written permission. The existing preparation therefore leaves portal entry and final submission to the participant. Official document: https://jigjoy.ai/terms-of-use . This does not prohibit the expressly permitted AI-assisted development of the project itself.
 

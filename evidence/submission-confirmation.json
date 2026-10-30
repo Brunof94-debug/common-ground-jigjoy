@@ -1,0 +1,16 @@
+{
+  "project": "Ponto Comum — Room for a Change",
+  "track": "Freestyle",
+  "contestSubmitted": true,
+  "status": "portal-confirmation-received",
+  "confirmedAt": "2026-10-30T12:36:53.676Z",
+  "source": "Screenshot of the official portal provided by the participant in this conversation after manual submission.",
+  "pageContext": "https://build.jigjoy.ai/submit",
+  "visibleHeading": "Submitted.",
+  "visibleMessage": "We've got it — your project is live in the gallery. You can resubmit from this page any time before the deadline; the latest entry replaces it and is the one judged.",
+  "evidence": "evidence/submission-confirmation.png",
+  "screenshotSha256": "f557734d71b0d8feda3da541397191ed23fd13df6261f1c23b6b95d0b8675e9a",
+  "verificationScope": "The screenshot confirms receipt and gallery publication. It does not display the submitted field values or a gallery entry URL.",
+  "pendingSubmissionReminder": "deleted",
+  "automationId": "retomar-3alet-jigjoy"
+}

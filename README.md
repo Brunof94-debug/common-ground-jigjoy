@@ -99,5 +99,5 @@ Ten meaningful tests cover integer arithmetic, reserve rounding, every offered o
 
 Application code and original SVG/CSS illustration: MIT, Bruno Fernandes, 2026. Mozaik 4.1.0 is MIT, by JigJoy. llama.cpp is MIT, by its contributors. Qwen3 model weights are Apache-2.0, by Qwen. `npm ci` uses the pinned lockfile; upstream dependencies keep their own licenses. See `THIRD_PARTY_NOTICES.md`.
 
-Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The submission is not complete until accepted by the participant portal.
+Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The participant manually submitted on 30 October and supplied the official portal’s “Submitted.” confirmation. See [submission receipt](evidence/submission-confirmation.json) and [portal screenshot](evidence/submission-confirmation.png).
 

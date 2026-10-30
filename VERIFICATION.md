@@ -15,5 +15,5 @@
 - Follow-up with the browser available on 30 October: the published recording was inspected at desktop and at a 375 CSS-pixel mobile viewport; no horizontal overflow was observed. Both download buttons produced files whose contents were checked. The local interactive application was exercised with a brief change during live inference. See evidence/live-browser-run.json and evidence/screenshots/. This does not constitute testing on every device.
 - Local run intervals show concurrency, not a benchmark of quality or speedup. No real-world workshop, customer, attendee or venue was involved.
 - The public static site is a labelled saved run; live editable inference requires the local Node and llama.cpp processes.
-- Contest submission is pending the participant portal's actual confirmation. A published repository is not by itself a submission receipt.
+- Contest submission confirmed from the participant-provided screenshot of the official portal on 30 October, showing ‘Submitted.’ and gallery publication. See evidence/submission-confirmation.json and evidence/submission-confirmation.png. The screenshot does not show the submitted field values or a gallery entry URL. The pending-submission reminder was deleted.
 
