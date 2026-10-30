@@ -9,5 +9,5 @@
   "verifiedAt": "2026-10-30T11:28:08.0131362Z",
   "verifiedChecksRun": "https://github.com/Brunof94-debug/ponto-comum-jigjoy/actions/runs/41047915312",
   "verifiedPagesRun": "https://github.com/Brunof94-debug/ponto-comum-jigjoy/actions/runs/41047911341",
-  "browserVisualReview": "pending: browser unavailable in background run"
+  "browserVisualReview": "verified 2026-10-30: desktop, mobile 375 CSS px, both recorded downloads, live UI change during inference"
 }

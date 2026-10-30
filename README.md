@@ -68,6 +68,7 @@ node demo.mjs --midflight
 The first command runs the original brief, waits for the two perspectives to settle, then applies rain, a closed garden and a reduced budget. The second changes the brief after 500 ms, while inference is in flight. Both write complete timestamped local-run receipts in `evidence/` and fail if no successful live calls overlap, if the final plan fails hard checks, or if the final review is not ready for host review.
 
 - `evidence/live-run.json`: current implementation, ten real model calls, four overlapping cross-agent call pairs, two old answers discarded; final `V2-A3-F3`, total 46,200 cents including 4,200 reserve, against a 48,000-cent budget. These are counts for one authored local scenario, not accuracy statistics.
+- `evidence/live-browser-run.json`: current live application exercised through the browser, including a brief change while both agents were thinking; seven real model calls, four overlapping pairs, three stale answers discarded and a feasible reviewed result. The downloaded JSON and planning note were read back and checked.
 - `evidence/live-midflight.json`: a real change-during-inference run. The first recorded version predates the budget-band guard. It demonstrates revision invalidation; check the `VERIFICATION.md` record for the version tested.
 - `evidence/live-run-before-budget-band.json`: deliberately retained initial run in which the small reviewer incorrectly called an 80,000-cent budget below 60,000. It motivated the explicit band and allowed-priority checks. This error is not hidden or counted as a correctness success.
 
@@ -88,7 +89,7 @@ Ten meaningful tests cover integer arithmetic, reserve rounding, every offered o
 - The board is held in memory; restarting the application loses it. Export a run record if needed. Downloaded files and backups must be managed by the person who saves them.
 - There is no invented model fallback. Provider failures and invalid outputs become visible errors. A recorded demonstration never replaces a live request.
 - This small model can make reasoning mistakes. Real availability, costs, accessibility requirements and arrangements need human confirmation. No user testing or production reliability has been claimed.
-- Browser visual QA was unavailable during the background build. The HTTP routes, actual model workflow and domain tests were verified; visual and device compatibility are pending a browser review.
+- Browser follow-up on 30 October verified the published recording at desktop and a 375 CSS-pixel mobile viewport, both download files, and a live interactive change-during-inference run. This is one browser and viewport check, not universal device compatibility testing.
 
 ## Project files
 
@@ -99,3 +100,4 @@ Ten meaningful tests cover integer arithmetic, reserve rounding, every offered o
 Application code and original SVG/CSS illustration: MIT, Bruno Fernandes, 2026. Mozaik 4.1.0 is MIT, by JigJoy. llama.cpp is MIT, by its contributors. Qwen3 model weights are Apache-2.0, by Qwen. `npm ci` uses the pinned lockfile; upstream dependencies keep their own licenses. See `THIRD_PARTY_NOTICES.md`.
 
 Official track: https://build.jigjoy.ai/tracks/freestyle . The updated deadline is 31 October, 20:00 CET (16:00 Brasilia). A public reproducible repository and README are required; the track says no video is needed. The submission is not complete until accepted by the participant portal.
+

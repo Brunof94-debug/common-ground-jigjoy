@@ -10,9 +10,10 @@
 - Local HTTP root returned 200 with the intended application title. See the HTTP probe record for route and origin checks.
 - No existing project keys or private model data were reused. No account or paid inference was created. Mozaik cloud telemetry was disabled for the application process.
 
-## Pending / limits
+## Follow-up and remaining limits
 
-- The in-app browser was unavailable during the background build: the browser inventory was empty. No screenshot, browser interaction, rendering, mobile-device test or end-to-end download verification is claimed.
+- Follow-up with the browser available on 30 October: the published recording was inspected at desktop and at a 375 CSS-pixel mobile viewport; no horizontal overflow was observed. Both download buttons produced files whose contents were checked. The local interactive application was exercised with a brief change during live inference. See evidence/live-browser-run.json and evidence/screenshots/. This does not constitute testing on every device.
 - Local run intervals show concurrency, not a benchmark of quality or speedup. No real-world workshop, customer, attendee or venue was involved.
 - The public static site is a labelled saved run; live editable inference requires the local Node and llama.cpp processes.
 - Contest submission is pending the participant portal's actual confirmation. A published repository is not by itself a submission receipt.
+
