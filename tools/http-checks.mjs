@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';import {writeFile} from 'node:fs/promises';
+const base='http://127.0.0.1:4351';const checks=[];
+for(const [name,url,options,expected] of [
+ ['application',base+'/',{},200],['script module',base+'/app.mjs',{},200],['stylesheet',base+'/style.css',{},200],['local configuration',base+'/app-config.json',{},200],['model readiness',base+'/api/info',{},200],['private model path is not served',base+'/.runtime/model-manifest.json',{},404],['foreign origin is rejected',base+'/api/constraints',{method:'POST',headers:{Origin:'https://example.invalid','Content-Type':'application/json'},body:'{}'},403],['non-JSON input is rejected',base+'/api/constraints',{method:'POST',headers:{'Content-Type':'text/plain'},body:'{}'},400],['negative budget is rejected',base+'/api/constraints',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({budget:-1})},400]
+ ]){const r=await fetch(url,options);assert.equal(r.status,expected,name);checks.push({name,status:r.status});}
+await writeFile('evidence/http-checks.json',JSON.stringify({checkedAt:new Date().toISOString(),checks},null,2)+'\n');console.log(JSON.stringify({httpChecks:checks.length,allPassed:true}));

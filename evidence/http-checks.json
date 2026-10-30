@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-30T11:24:46.016Z",
+  "checks": [
+    {
+      "name": "application",
+      "status": 200
+    },
+    {
+      "name": "script module",
+      "status": 200
+    },
+    {
+      "name": "stylesheet",
+      "status": 200
+    },
+    {
+      "name": "local configuration",
+      "status": 200
+    },
+    {
+      "name": "model readiness",
+      "status": 200
+    },
+    {
+      "name": "private model path is not served",
+      "status": 404
+    },
+    {
+      "name": "foreign origin is rejected",
+      "status": 403
+    },
+    {
+      "name": "non-JSON input is rejected",
+      "status": 400
+    },
+    {
+      "name": "negative budget is rejected",
+      "status": 400
+    }
+  ]
+}
